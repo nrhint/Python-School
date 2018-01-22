@@ -206,9 +206,13 @@ CUBVo   |CUB.volume           |95                |Cuboid    |6               |
 CUBPe   |CUB.permiter         |98                |Cuboid    |11              |
 ________________________________________________________________________
 External files:
-Geometry.py
-Fractions.py
-Pathag.py
+Circle.py
+Cuboid.py
+Cylinder.py
+Fractions.py (Unavilable right now)
+Sphere.py
+Square.py
+Triangle.py
 
             """)
     print()
