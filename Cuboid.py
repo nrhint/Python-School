@@ -28,7 +28,7 @@ right after to make CUBAr.
 CUB-------Show CUB help.
 CUBVo-----Cuboid volume.
 CUBAr-----Cuboid area.
-CUBPe-----Cuboid calcluate the permiter of a triangle
+CUBPe-----Cuboid calcluate the total edge length of a square--Not sure why thisis here.
     """)
 ##end CUB help
 

@@ -11,18 +11,7 @@ def area():
     base = input("base  ")
     height = input("height  ")
     print(int(base)*int(height)/2)
-def checkForTripple():
-    a = input("a = ")
-    b = input("b = ")
-    c = input("c = ")
-    if m.sqrt(int(a)**2+int(b)**2) == int(c):
-        print("a^2+b^2=c^2")
-    elif m.sqrt(int(b)**2+int(c)**2) == int(a):
-        print("b^2+c^2=a^2")
-    elif m.sqrt(int(c)**2+int(a)**2) == int(b):
-        print("c^2+a^2=b^2")
-    else:
-        print("False")
+
 def pathag():
     side1 = input("side1  ")
     side2 = input("side2  ")
@@ -50,7 +39,6 @@ right after to make TRIAr.
     print("""
 TRI-------Show TRI help.
 TRIAr-----Triangle area.
-TRICFTr---Triangle check for Tripple.
 pathag---Triangle calcluate side for right triangle using pathag.
 TRIPe-----Triangle calcluate the permiter of a triangle
     """)

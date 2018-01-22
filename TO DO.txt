@@ -1,0 +1,7 @@
+To Do:
+
+FIXED!!!
+
+Can handle all of the errors.
+
+In RunMe fix the FRAr function to make it so it works.  The function works fron the file, but the program is not running it propperly.
