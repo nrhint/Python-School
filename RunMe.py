@@ -135,10 +135,15 @@ def runProg():
             #Find the volume of a cylinder
             elif user == 'CYLVo':
                 CYL.volume()
+            #Prism help
             elif user == 'PRI':
                 PRI.help()
+            #Prism volume
             elif user == 'PRIVo':
                 PRI.volume()
+            #Prism surface area
+            elif user == 'PRIAr':
+                PRI.area()
         except Exception as e:
             print("Error: %s"%e)
 
