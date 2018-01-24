@@ -18,6 +18,9 @@ def volume():
     r = input("Radius:  ")
     h = input("Height:  ")
     p = 3.14  #Pi
-    print(int(r)**2*p*int(h))
+    try:
+        print(int(r)**2*p*int(h))
+    except ValueError:
+        print(float(r)**2*p*float(h))
 
 print("Done loading Cylinder programs")

@@ -27,7 +27,7 @@ except AttributeError:
 ##import Cylinder as CYL
 
 
-def runProg():
+def MAIN():
     ##import required files
     import Triangle as TRI
     import Square as SQU
@@ -71,7 +71,7 @@ def runProg():
             ##exit function
             if user == 'exit':
                 end = True
-                print("type: runProg() to run the programm again")
+                print("type: MAIN() to run the programm again")
             ##help function
             elif user == 'h':
                 h()
