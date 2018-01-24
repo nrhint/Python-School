@@ -36,6 +36,7 @@ def runProg():
     import Fractions as FRA
     import Cylinder as CYL
     import Sphere as SPH
+    import Prism as PRI
     import math as M
     print("finished importing math as M")
     #start program
@@ -134,6 +135,10 @@ def runProg():
             #Find the volume of a cylinder
             elif user == 'CYLVo':
                 CYL.volume()
+            elif user == 'PRI':
+                PRI.help()
+            elif user == 'PRIVo':
+                PRI.volume()
         except Exception as e:
             print("Error: %s"%e)
 
@@ -163,22 +168,28 @@ CIRPe   |CIR.permiter         |Circle    |
 CIR     |CIR.help             |Circle    |
 SQU     |SQU.help             |Square    |--SQU functions last checked JAN-22-2018
 SQUAr   |CIR.area             |Square    |
-CIRPe   |CIR.permiter         |Square    |
+CIRPe   |CIR.permiter         |Circle    |--HAS MORE COMMANDS!!!
 FRAr    |FRA.run              |Fractions |--!!!BROKEN!!!
 FRA     |FRA.help             |Fractions |
 CUB     |CUB.help             |Cuboid    |--CUB functions last checked JAN-22-2018
 CUBAr   |CUB.totalSurfaceArea |Cuboid    |
 CUBVo   |CUB.volume           |Cuboid    |
 CUBPe   |CUB.permiter         |Cuboid    |
+SPH--Needs help function
+CYL--Needs help function
+EVAL--Needs help function
+PRI--Needs help function
 _____________________________________________________________
 External files:
 Circle.py
 Cuboid.py
 Cylinder.py
-Fractions.py (Unavilable right now)
+Fractions.py  Not working for some reason
 Sphere.py
 Square.py
 Triangle.py
+Eval.py
+Prism.py
 
             """)
     print()
