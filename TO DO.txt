@@ -1,5 +1,8 @@
 To Do:
 
+Finish going through the help files of the program.
+Make a prisim program.0
+
 FIXED!!!
 
 Can handle all of the errors.
