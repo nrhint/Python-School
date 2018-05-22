@@ -26,6 +26,18 @@ except AttributeError:
 ##import Fractions as FRA
 ##import Cylinder as CYL
 
+##Here is some MISC. stuff
+
+def prime(number):
+    print("Working...")
+    sq = M.sqrt(number)
+    div = 1
+    result = True
+    while div < sq+1 and result == True:
+        div +=1
+        if number % div == 0:
+            result = False
+    return result
 
 def MAIN():
     ##import required files
