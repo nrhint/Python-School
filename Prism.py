@@ -13,4 +13,4 @@ def volume():
 def help():
     print("NEEDS WORK")
 
-print("Done loading Prism programs")
+print("Done loading Prism programs.  May need help.  Be careful using this portion.")
