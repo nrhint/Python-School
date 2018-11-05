@@ -12,7 +12,8 @@ import pickle#for loading the file
 class StateMachineError(Exception):
     pass
 
-class Main:
+#Main class
+class Science:
     def __init__(self):
         #Load the file as eleList
         print("Loading File")
@@ -245,103 +246,81 @@ class Main:
         except IndexError:
             print("Item was to large! You made an index error.  Please make item smaller and try again!")
 
-Science = Main
+    def PC(self):#Process compound
+################################################################################
+        ##In progress/copied works:
+        #new molicule prosser where i is input.  Needs testing:
+        #a int is niether upper or lower so if a leter is neither than its an int.
+
+        self.i = str(input("Compound: ")
+
+        ##if i[x].isupper():
+        ##    state = 'upper'
+        ##elif i[x].islower():
+        ##    state = 'lower'
+        ##elif i[x].isdigit():
+        ##    state = 'digit'
+        ##else:
+        ##    raise StateMachineError
+
+
+        state = 'init'
+        self.element = ''
+        self.number = 1
+        self.finalData = []
+        def commit():
+            for l in range(int(self.number)):
+                self.finalData.append(self.element)
+            self.number = 1
+            self.element = ''
+
+        for x in self.i:
+            print(state)
+            if state == 'init':
+                if x.isupper():
+                    self.element += x
+                    state = 'upper'
+                else:
+                    raise StateMachineError("@ init expected upper char", state)
+            elif state == 'upper':#Done
+                if x.isupper():
+                    commit()
+                    self.element += x
+                elif x.islower():
+                    self.element += x
+                    state = 'lower'
+                elif x.isdigit():
+                    self.number = x
+                    state = 'digit'
+                else:
+                    raise StateMachineError("@ upper unexpected char", state)
+            elif state == 'lower':
+                if x.isupper():
+                    commit()
+                    self.element += x
+                    state = 'upper'
+                elif x.isdigit():
+                    self.number += x
+                    state = 'digit'
+                else:
+                    raise StateMachineError("@ lower expected upper or digit", state)
+            elif state == 'digit':
+                if x.isupper():
+                    commit()
+                    self.element += x
+                    state = 'upper'
+                elif x.isdigit():
+                    self.number += x
+                    state = 'digit'
+                else:
+                    raise StateMachineError("@ Digit expected upper or digit", state)
+            else:
+                raise StateMachineError("@StateMachine expected something, I dont know what", state)
+        commit()
+        return self.finalData
+
+
+################################################################################
+
+Science = Science
 #Science.main(self)
-
-################################################################################
-##In progress/copied works:
-#new molicule prosser where i is input.  Needs testing:
-#a int is niether upper or lower so if a leter is neither than its an int.
-
-i = 'FeO3'
-
-##if i[x].isupper():
-##    state = 'upper'
-##elif i[x].islower():
-##    state = 'lower'
-##elif i[x].isdigit():
-##    state = 'digit'
-##else:
-##    raise StateMachineError
-
-
-state = 'init'
-element = ''
-number = ''
-finalData = []
-def commit():
-    finalData.append(element)
-    number = ''
-    element = ''
-
-x = 0
-for x in i:
-    print(state)
-    if state == 'init':
-        if x.isupper():
-            element = x
-            state = 'upper'
-        else:
-            raise StateMachineError("@ init expected upper char", state)
-    elif state == 'upper':#Done
-        if x.isupper():
-            commit()
-            element = x
-        elif x.islower():
-            element += x
-            state = 'lower'
-        elif x.isdigit():
-            number = x
-            state = 'digit'
-        else:
-            raise StateMachineError("@ upper unexpected char", state)
-    elif state == 'lower':
-        if x.isupper():
-            commit()
-            element = x
-            state = 'upper'
-        elif x.isdigit():
-            number = x
-            state = 'digit'
-        else:
-            raise StateMachineError("@ lower expected upper or digit", state)
-    elif state == 'digit':
-        if x.isupper():
-            commit()
-            element = x
-            state = 'upper'
-        elif x.isdigit():
-            number += x
-            state = 'digit'
-        else:
-            raise StateMachineError("@ Digit expected upper or digit", state)
-    else:
-        raise StateMachineError("@StateMachine expected something, I dont know what", state)
-
-
-################################################################################
-#Following code OLD:
-
-def splitMolic():
-    i = input("Molicule with spaces between elements:  ")
-    i = i.split(' ')
-    print(i)
-    al = []
-    for x in range(len(i)):
-        print(i[x])
-        smol2 = i[x]
-        lst = []
-        for y in range(len(smol2)):
-            try:
-                lst.append(int(smol2[y]))
-            except ValueError:
-                lst.append(smol2[y])
-                print(lst)
-        al.append(lst)
-##    for s in range(len(x)):
-##        q = 10**(len(x)-(1+s))
-##        print(q)
-##        w = w+(x[s]*q)
-##        print(w)
-    return al
-################################################################################
