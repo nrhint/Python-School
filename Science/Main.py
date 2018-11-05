@@ -18,14 +18,15 @@ class Science:
         #Load the file as eleList
         print("Loading Element File")
         self.pklFile = 'elementlist.pkl'
-        self.dat = pickle.load(open(pklFile, 'rb'))#open('/NathanShare/School/Science2018-2019/elementlist.pkl', 'rb'))
+        self.dat = pickle.load(open(self.pklFile, 'rb'))#open('/NathanShare/School/Science2018-2019/elementlist.pkl', 'rb'))
         #dat = dat.read()
-        self.dat = dat.replace('\n', '|')#Remove the newlines and add the pipes to seperate elements.
-        self.eleList = dat.split('|')
+        self.dat = self.dat.replace('\n', '|')#Remove the newlines and add the pipes to seperate elements.
+        self.eleList = self.dat.split('|')
         ###########################################
         print("Defining stuff")
         self.valance = [2, 10, 18, 36, 54, 86, 118]
         self.MOLE = 6.02*10**27
+        self.item = None
         #return pklFile, eleList, valance, MOLE
 
     #Calc Atom stuff
@@ -47,11 +48,11 @@ class Science:
         origPkl.close()
         print("Data written!")
         print()
-        self.__init__():
+        #self.__init__()
         #print("Program restart required for changes to make affect.")
         #print("<<<NOT FINISHED>>>")
 
-    def PD(self, self.item):
+    def PD(self, item):
         #print('PD (ProcessData) was ran.')
         self.lst = []
         #Process string:
@@ -119,7 +120,7 @@ class Science:
                 print("Error")
         except IndexError:
             print("Index error! This could be from missing data in the pkl file. Try running the update function to make sure that the data matches.  This also could be caused by a bug in the progtam.  If you look in the elementlist.txt file and make sure that the data you are requesting is there and then update the pkl file and the error persists then there is an error in the program.")
-
+##############################################################################
     def main(self):
         while True:
             #input portion:
@@ -139,17 +140,21 @@ class Science:
                 print('Input error...')
 
     def findAtom(self, char):
-        for x in range(len(eleList)):
+        for x in range(len(self.eleList)):
             #print(eleList[x]) #Noise reduction
-            ele = PD(eleList[x])
+            ele = self.PD(self.eleList[x])
+            #print()
+            #print(ele)
             try:
-                if ele[1].lower() == str(char):
+                if ele[1].lower() == str(char.lower()):
                     print(ele)
                     return(ele)
+                if ele == '':
+                    print("''")
             except IndexError:
                 print("IndexError processed.")
                 print("Elemment not in the list or the abbr was typed wrong")
-                findAtom(input("Try again, element:  "))
+                self.findAtom(input("Try again, element:  "))
 
     def amu(self, eleAbbr):
         self.ele = findAtom(eleAbbr)
@@ -162,8 +167,8 @@ class Science:
         self.equList = []
         self.i = str(input('element to be processed:  '))
         while self.add == True:
-            self.ele = findAtom(i.lower())
-            self.ele = PD(ele)
+            self.ele = self.findAtom(i.lower())
+            self.ele = self.PD(ele)
             self.amu = ele[3] + amu
             self.equList.append(ele[1])
             self.i = input('are you done? ("yes"):  ')
@@ -247,13 +252,8 @@ class Science:
         except IndexError:
             print("Item was to large! You made an index error.  Please make item smaller and try again!")
 
-    def PC(self):#Process compound
-################################################################################
-        ##In progress/copied works:
-        #new molicule prosser where i is input.  Needs testing:
-        #a int is niether upper or lower so if a leter is neither than its an int.
-
-        self.i = str(input("Compound: ")
+    def PC(self):#Process compound This is the first state machine I have Made!
+        self.i = str(input("Compound: "))
 
         ##if i[x].isupper():
         ##    state = 'upper'
@@ -319,9 +319,21 @@ class Science:
                 raise StateMachineError("@StateMachine expected something, I dont know what", state)
         commit()
         return self.finalData
+    def inp(self):#Input for the program.
+        self.PC()
+        self.inpDat = []
+        print(self.finalData)
+        for x in range(len(self.finalData)):
+            item = self.finalData[x]
+            #print(item)
+            elem = self.findAtom(item)
+            self.inpDat.append(elem)
+            #print(elem)
+        return self.inpDat
 
 
 ################################################################################
 
-Science = Science
+s = Science()
+S = Science()
 #Science.main(self)
