@@ -16,17 +16,17 @@ class StateMachineError(Exception):
 class Science:
     def __init__(self):
         #Load the file as eleList
-        print("Loading File")
-        pklFile = 'elementlist.pkl'
-        dat = pickle.load(open(pklFile, 'rb'))#open('/NathanShare/School/Science2018-2019/elementlist.pkl', 'rb'))
+        print("Loading Element File")
+        self.pklFile = 'elementlist.pkl'
+        self.dat = pickle.load(open(pklFile, 'rb'))#open('/NathanShare/School/Science2018-2019/elementlist.pkl', 'rb'))
         #dat = dat.read()
-        dat = dat.replace('\n', '|')#Remove the newlines and add the pipes to seperate elements.
-        eleList = dat.split('|')
+        self.dat = dat.replace('\n', '|')#Remove the newlines and add the pipes to seperate elements.
+        self.eleList = dat.split('|')
         ###########################################
         print("Defining stuff")
-        valance = [2, 10, 18, 36, 54, 86, 118]
-        MOLE = 6.02*10**27
-        return pklFile, eleList, valance, MOLE
+        self.valance = [2, 10, 18, 36, 54, 86, 118]
+        self.MOLE = 6.02*10**27
+        #return pklFile, eleList, valance, MOLE
 
     #Calc Atom stuff
 
@@ -47,28 +47,29 @@ class Science:
         origPkl.close()
         print("Data written!")
         print()
-        print("Program restart required for changes to make affect.")
+        self.__init__():
+        #print("Program restart required for changes to make affect.")
         #print("<<<NOT FINISHED>>>")
 
-    def PD(self, item):
+    def PD(self, self.item):
         #print('PD (ProcessData) was ran.')
-        lst = []
+        self.lst = []
         #Process string:
         if type(item) == str:
-            lst = item.split(' ')
+            self.lst = item.split(' ')
         elif type(item) == list:
             for x in range(len(item)):
                 try:
-                    lst.append(float(item[x]))
+                    self.lst.append(float(item[x]))
                 except ValueError:
                     print("ValueError processed")
-                    lst.append(item[x])
+                    self.lst.append(item[x])
         else:
             print()
             print("                !!!WARNING!!!")
             print("Unknown or unrecognized data type. returning empty list")
-        return lst
-
+        return self.lst
+############################################## Needs to be updated: ###########
     def CalcAtom(self):
         print("Type 0 or 1")
         i = int(input())
@@ -151,30 +152,30 @@ class Science:
                 findAtom(input("Try again, element:  "))
 
     def amu(self, eleAbbr):
-        ele = findAtom(eleAbbr)
-        ele = PD(ele)
-        return ele[3]    
+        self.ele = findAtom(eleAbbr)
+        self.ele = PD(ele)
+        return self.ele[3]    
 
-    def stoi(self, ):
-        add = True
-        amu = 0
-        equList = []
-        i = str(input('element to be processed:  '))
-        while add == True:
-            ele = findAtom(i.lower())
-            ele = PD(ele)
-            amu = ele[3] + amu
-            equList.append(ele[1])
-            i = input('are you done? ("no"):  ')
-            if i == 'no':
-                add = False
+    def stoi(self):
+        self.add = True
+        self.amu = 0
+        self.equList = []
+        self.i = str(input('element to be processed:  '))
+        while self.add == True:
+            self.ele = findAtom(i.lower())
+            self.ele = PD(ele)
+            self.amu = ele[3] + amu
+            self.equList.append(ele[1])
+            self.i = input('are you done? ("yes"):  ')
+            if self.i == 'yes':
+                self.add = False
             #i2 = inp'how many grams do you have of %s:  ' %s = i)
         print('how many grams do you have of %s:  ' %equList)
-        i2 = float(input())
-        mol = round(round(i2, 3)/round(amu, 2), 3)
+        self.i2 = float(input())
+        self.mol = round(round(self.i2, 3)/round(self.amu, 2), 3)
         print()
-        print(mol)
-        return mol, (equList, amu)
+        print(self.mol)
+        return self.mol, (self.equList, self.amu)
 
     def stoi2(self, moles):
         add = True
