@@ -1,0 +1,29 @@
+Science/MainV2:
+
+Class: StateMachineError
+NOTHING!
+
+Class: Science
+def __init__(self):
+	no dependencies
+def updatePkl(self, fname, pklfile):
+	no dependencies
+def PD(self, item):
+	no dependencies
+def findAtom(self, chars):
+	self.PD
+	self.self
+def amu(self, eleName):
+	self.findAtom
+	self.PD
+def Seperate(self, lst, item):
+	no dependencies
+def PC(self):
+	def commit():
+		no dependencies
+	no dependencies
+def inp(self):
+	self.PC
+	self.findAtom
+def inpNums(self)
+	no dependencies

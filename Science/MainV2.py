@@ -1,7 +1,7 @@
 ##Nathan Hinton
 #
 #TODO:
-#ORGANIZE!
+#Moving the extra nonBasic functions to the bottom and remaking them with newer functions and processing.
 
 #import stuff
 print("Importing")
@@ -17,6 +17,7 @@ class StateMachineError(Exception):
 
 #Main class
 class Science:
+#########################Stuff to use for later input and data#################
     def __init__(self):#Version 1 unknown
         #Load the file as eleList
         print("Loading Element File")
@@ -51,7 +52,7 @@ class Science:
         origPkl.close()
         print("Data written!")
         print()
-        #self.__init__()
+        self.__init__()
         #print("Program restart required for changes to make affect.")
         #print("<<<NOT FINISHED>>>")
 
@@ -73,75 +74,7 @@ class Science:
             print("                !!!WARNING!!!")
             print("Unknown or unrecognized data type. returning empty list")
         return self.lst
-############################################## Needs to be updated: ###########
-    def CalcAtom(self):#Version 1 unknown
-        print("Type 0 or 1")
-        i = int(input())
-        try:
-            if i == 0: #When you have the parts not the name
-                z = int(input("Protons: "))# (Number of Protons)
-                e = int(input("Electrons: "))# (Number of Electrons)
-                n = int(input("Neutrons (None if unknown): "))# (Number of Neutrons)
-
-                if n == 'None':
-                    a = "Not able to find!"
-                else:
-                    a = z+n
-                charge = z-e
-
-                #Atom number = Z
-                #Atomic mass = A
-
-                print('Element is: \n'+str(eleList[z-1]))
-                print('Protons: '+str(z))
-                print('electrons: '+str(e))
-                print('Neutrons: '+str(n))
-                print('Atomic weight: '+str(a))
-                print('Charge: '+str(charge))
-            elif i == 1: #Other stff
-                z = int(input("Protons: "))# (Number of Protons)
-                #e = int(input("Electrons: "))# (Number of Electrons)
-                #n = int(input("Neutrons: "))# (Number of Neutrons)
-                charge = int(input("Charge: "))
-                a = int(input("Mass: "))
-
-                #a = z+n
-                n = a-z
-                #charge = z-e
-                e = z-charge
-
-                #Atom number = Z
-                #Atomic mass = A
-
-                print('Element is: \n'+str(eleList[z-1]))
-                print('Protons: '+str(z))
-                print('electrons: '+str(e))
-                print('Neutrons: '+str(n))
-                print('Atomic weight: '+str(a))
-                print('Charge: '+str(charge))
-            else:
-                print("Error")
-        except IndexError:
-            print("Index error! This could be from missing data in the pkl file. Try running the update function to make sure that the data matches.  This also could be caused by a bug in the progtam.  If you look in the elementlist.txt file and make sure that the data you are requesting is there and then update the pkl file and the error persists then there is an error in the program.")
-##############################################################################
-    def main(self):#Version 1 unknown
-        while True:
-            #input portion:
-            print("There are several different inputs:")
-            print("0 = you have the element and want the info")
-            print("1 = stoichometry")
-            print("2 = limit reagent problem")
-            i = input()
-            #logic:
-            if i == '0':
-                ele = findAtom(input("the chars in lowercase:"))
-            elif i == '1':
-                stoi()
-            elif i == '2':
-                limitReagent()
-            else:
-                print('Input error...')
-
+#REMOVED CalcAtom and main
     def findAtom(self, char):#Version 1 unknown
         for x in range(len(self.eleList)):
             #print(eleList[x]) #Noise reduction
@@ -160,100 +93,16 @@ class Science:
                 self.findAtom(input("Try again, element:  "))
 
     def amu(self, eleAbbr):#Version 1 unknown
-        self.ele = findAtom(eleAbbr)
-        self.ele = PD(ele)
+        self.ele = self.findAtom(eleAbbr)
+        self.ele = PD(self.ele)
         return self.ele[3]    
-
-    def stoi(self):#Version 1 unknown
-        self.add = True
-        self.amu = 0
-        self.equList = []
-        self.i = str(input('element to be processed:  '))
-        while self.add == True:
-            self.ele = self.findAtom(i.lower())
-            self.ele = self.PD(ele)
-            self.amu = ele[3] + amu
-            self.equList.append(ele[1])
-            self.i = input('are you done? ("yes"):  ')
-            if self.i == 'yes':
-                self.add = False
-            #i2 = inp'how many grams do you have of %s:  ' %s = i)
-        print('how many grams do you have of %s:  ' %equList)
-        self.i2 = float(input())
-        self.mol = round(round(self.i2, 3)/round(self.amu, 2), 3)
-        print()
-        print(self.mol)
-        return self.mol, (self.equList, self.amu)
-
-    def stoi2(self, moles):#Version 1 unknown
-        add = True
-        amu = 0
-        equList = []
-        i = str(input('element to be processed:  '))
-        while add == True:
-            ele = findAtom(i.lower())
-            ele = PD(ele)
-            amu = ele[3] + amu
-            equList.append(ele[1])
-            i = input('are you done? ("no"):  ')
-            if i == 'no':
-                add = False
-            #i2 = inp'how many grams do you have of %s:  ' %s = i)
-        #print('how many moles do you have of %s:  ' %equList)
-        #i2 = float(input())
-        gms = round(round(moles, 3)*round(amu, 2), 3)
-        print()
-        print(gms)
-        return gms, (equList, amu)
-
-    def limitReagent(self):#Version 1 unknown
-        print("for use in limiting reagent problems.")
-        print("First equation set:")
-        mol1, dat1 = stoi()
-        print("Second equation set:")
-        mol2, dat2 = stoi()
-        print("Comparing moles and generating ratio...")
-        if mol1 > mol2:
-            lmt = mol2
-            ratio = mol2/mol1
-            print("%s is the limiting reagent." %dat2[0])
-            print("Ratio: %s"%ratio)
-        elif mol1 < mol2:
-            lmt = mol1
-            ratio = mol1/mol2
-            print("Ratio: %s"%ratio)
-            print("%s is the limiting reagent." %dat1[0])
-        else:
-            print("The elements have the same moles or there is an error in the comparing.")
-        print("moles of first: %s elements in first: %s" %(mol1, dat1[0]))
-        print("moles of second: %s elements in second: %s" %(mol2, dat2[0]))
-        print()
-        print("Goal compound:")
-        mol3, dat3 = stoi2(lmt)
-        #gms = dat3[1]*ratio
-        #print(gms)
-        print(mol3, dat3)
-        
-    def SearchAtom(self, char):#Version 1 unknown
-        print("Please put all of the chars in LOWERCASE")
-        if len(char) < 2:
-            for x in range(len(eleList)):
-                ele = PL(eleList[x].lower())
-                if str(char) == ele[2].lower():
-                    print(ele)
-        else:
-            for x in range(len(eleList)):
-                ele = eleList[x]
-                if str(char) == ele[1].lower():
-                    print(ele)
-                #print(x)
-
+#REMOVED stoi and stoi2 and limitReagent and SearchAtom
     def Seperate(self, lst, item):#Version 1 unknown
-        x = eleList[lst]
+        x = self.eleList[lst]
         try:
             return x[item]
         except IndexError:
-            print("Item was to large! You made an index error.  Please make item smaller and try again!")
+            print("INDEX ERROR, something went wrong with you input")
 
     def PC(self):#Version 1 unknown
         #Process compound This is the first state machine I have Made!
@@ -323,6 +172,7 @@ class Science:
                 raise StateMachineError("@StateMachine expected something, I dont know what", state)
         commit()
         return self.finalData
+    
     def inp(self):#Version 1 unknown
         #Input for the program.
         self.PC()
@@ -335,7 +185,11 @@ class Science:
             self.inpDat.append(elem)
             #print(elem)
         return self.inpDat
+#    def inpNums(self):
+#        self.inpDatNum = int(input("two or three numbers, seperate with spaces.  a 0 is a placeholder:  "))
+#        return self.inp DatNum.split(' ')
 
+#TO MAKE: STOICHOMETRY, 
 
 ################################################################################
 
