@@ -1,0 +1,26 @@
+Z = 26 (Number of Protons)
+E = 24 (Number of Electrons)
+N = 32 (Number of Neutrons)
+
+A = Z+N 
+
+Atom number = Z
+Atomic mass = A
+
+The isotope is:
+Fe
+
+or:
+
+
+-----------------------------
+18F1-
+
+Z = 9 (Number of Protons)
+E = 10 (Number of Electrons)
+N = 9 (Number of Neutrons)
+
+A = Z+N
+
+Atom number = Z
+Atomic mass = A
