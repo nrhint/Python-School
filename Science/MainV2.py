@@ -92,10 +92,14 @@ class Science:
                 print("Elemment not in the list or the abbr was typed wrong")
                 self.findAtom(input("Try again, element:  "))
 
-    def amu(self, eleAbbr):#Version 1 unknown
-        self.ele = self.findAtom(eleAbbr)
-        self.ele = PD(self.ele)
-        return self.ele[3]    
+    def amu(self, eleDat):#Version 1 unknown
+        self.result = 0
+        #print(len(eleDat))
+        for w in range(0, len(eleDat)):
+            #print(w)
+            #print(eleDat[w][3])
+            self.result += float(eleDat[w][3])
+        return self.result
 #REMOVED stoi and stoi2 and limitReagent and SearchAtom
     def Seperate(self, lst, item):#Version 1 unknown
         x = self.eleList[lst]
@@ -104,7 +108,7 @@ class Science:
         except IndexError:
             print("INDEX ERROR, something went wrong with you input")
 
-    def PC(self):#Version 1 unknown
+    def PC(self):#Version 1 Needs to have a ratio(nuber in front)
         #Process compound This is the first state machine I have Made!
         self.i = str(input("Compound: "))
 
@@ -120,6 +124,7 @@ class Science:
 
         state = 'init'
         self.element = ''
+        self.mult = 1
         self.number = 1
         self.finalData = []
         def commit():
@@ -130,12 +135,16 @@ class Science:
 
         for x in self.i:
             print(state)
+            print(self.number)
             if state == 'init':
                 if x.isupper():
                     self.element += x
                     state = 'upper'
+                elif x.isdigit():
+                    self.mult += int(x)-1
+                    state = 'init'
                 else:
-                    raise StateMachineError("@ init expected upper char", state)
+                    raise StateMachineError("@init expected upper char", state)
             elif state == 'upper':#Done
                 if x.isupper():
                     commit()
@@ -144,7 +153,7 @@ class Science:
                     self.element += x
                     state = 'lower'
                 elif x.isdigit():
-                    self.number = x
+                    self.number += int(x)-1
                     state = 'digit'
                 else:
                     raise StateMachineError("@ upper unexpected char", state)
@@ -154,7 +163,7 @@ class Science:
                     self.element += x
                     state = 'upper'
                 elif x.isdigit():
-                    self.number += x
+                    self.number += int(x)-1
                     state = 'digit'
                 else:
                     raise StateMachineError("@ lower expected upper or digit", state)
@@ -163,9 +172,6 @@ class Science:
                     commit()
                     self.element += x
                     state = 'upper'
-                elif x.isdigit():
-                    self.number += x
-                    state = 'digit'
                 else:
                     raise StateMachineError("@ Digit expected upper or digit", state)
             else:
@@ -196,22 +202,49 @@ class Science:
         self.weight2 = 0
         print("The first compound:  ")
         self.dat1 = self.inp()
+        self.mult1 = self.mult
         print("The second compound:  ")
         self.dat2 = self.inp()
+        self.mult2 = self.mult
         print("DATA:")
         print(self.dat1)
         print(self.dat2)
         print()
         print()
-        ##ADD THE AMU OF THE PARTS:
-        for w in range(len(self.dat1)):
-            print(w)
-            print(self.dat1[w][3])
-            self.weight1 += float(self.dat1[w][3])
-        for w in range(len(self.dat2)):
-            print(w)
-            print(self.dat2[w][3])
-            self.weight2 += float(self.dat2[w][3])
+        #ADD AMU V2:
+        self.weight1 = round(float(input("Mass of first compound:  "))/self.amu(self.dat1), 8)
+        self.weight2 = round(float(input("Mass of second compound:  "))/self.amu(self.dat2), 8)
+        #Final code for comparisan and final output.
+        if self.mult1<s.mult2:
+            self.multLarge = s.mult2
+        else:
+            self.multLarge = s.mult1
+        print(self.multLarge)
+        print(self.weight1, self.weight2)
+        print(self.weight1/self.mult1, self.weight2/self.mult2)
+        if self.weight1/self.mult1<self.weight2/self.mult2:
+            print("1 is less")
+            self.weight = self.weight1
+            self.mul = self.mult1
+        elif self.weight1/self.mult1>self.weight2/self.mult2:
+            print("2 is less")
+            self.weight = self.weight2
+            self.mul = self.mult2
+        else:
+            print("!!!BALLANCED WEIGHT OR ERROR!!!.")
+            self.weight = self.weight1
+            self.mul = 'Error'
+        print("What is the end result")
+        self.dat3 = self.inp()
+        self.mult3 = self.mult
+        self.weight3 = self.amu(self.dat3)
+        self.answer = self.weight/(self.mul/self.mult3)#HERE IS THE PROBLEM
+        print()
+        print("Moles: ", self.weight1, self.weight2, self.weight3)
+        print("AMUs: ", self.amu(self.dat1), self.amu(self.dat2), self.amu(self.dat3))
+        print("Answers:")
+        print("Moles: %s"%self.answer)
+        print("Grams: %s"%(self.answer*self.weight3))
         
 ################################################################################
 
