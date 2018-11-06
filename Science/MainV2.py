@@ -190,9 +190,34 @@ class Science:
 #        return self.inp DatNum.split(' ')
 
 #TO MAKE: STOICHOMETRY, 
-
+    def lmtReagent(self):
+        #Setup vars/reset vars:
+        self.weight1 = 0
+        self.weight2 = 0
+        print("The first compound:  ")
+        self.dat1 = self.inp()
+        print("The second compound:  ")
+        self.dat2 = self.inp()
+        print("DATA:")
+        print(self.dat1)
+        print(self.dat2)
+        print()
+        print()
+        ##ADD THE AMU OF THE PARTS:
+        for w in range(len(self.dat1)):
+            print(w)
+            print(self.dat1[w][3])
+            self.weight1 += float(self.dat1[w][3])
+        for w in range(len(self.dat2)):
+            print(w)
+            print(self.dat2[w][3])
+            self.weight2 += float(self.dat2[w][3])
+        
 ################################################################################
 
 s = Science()
 S = Science()
 #Science.main(self)
+
+#Autorun:
+s.lmtReagent()
