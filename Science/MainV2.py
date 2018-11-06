@@ -195,7 +195,6 @@ class Science:
 #        self.inpDatNum = int(input("two or three numbers, seperate with spaces.  a 0 is a placeholder:  "))
 #        return self.inp DatNum.split(' ')
 
-#TO MAKE: STOICHOMETRY, 
     def lmtReagent(self):
         #Setup vars/reset vars:
         self.weight1 = 0
@@ -245,7 +244,40 @@ class Science:
         print("Answers:")
         print("Moles: %s"%self.answer)
         print("Grams: %s"%(self.answer*self.weight3))
-        
+    def GtoM(self):
+        self.dat = self.inp()
+        self.weight = round(float(input("Mass of compound:  "))/self.amu(self.dat), 8)
+        print(self.weight)
+    def MtoG(self):
+        self.dat = self.inp()
+        self.weight = round(float(input("Moles of compound:  "))*self.amu(self.dat), 8)
+        print(self.weight)
+    def convert(self):
+        print("1: Grams to Moles")
+        print("2: Moles to Grams")
+        self.i2 = input()
+        if self.i2 == '1':
+            self.GtoM()
+        elif self.i2 == '2':
+            self.MtoG()
+        else:
+            print("ERROR!")
+#TO MAKE: MAIN
+    def main(self):
+        print("1: Limiting reagent")
+        print("2: Find element and data")
+        print("3: Convert moles and grams")
+        self.i = input()
+        if self.i == '1':
+            self.lmtReagent()
+        elif self.i == '2':
+            print("Element abbr: ")
+            self.findAtom(input())
+        elif self.i == '3':
+            self.convert()
+        else:
+            print("Input error or method not defined!")
+        self.main()
 ################################################################################
 
 s = Science()
@@ -253,4 +285,4 @@ S = Science()
 #Science.main(self)
 
 #Autorun:
-s.lmtReagent()
+s.main()
