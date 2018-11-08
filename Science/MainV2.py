@@ -190,10 +190,7 @@ class Science:
             elem = self.findAtom(item)
             self.inpDat.append(elem)
             #print(elem)
-        return self.inpDat
-#    def inpNums(self):
-#        self.inpDatNum = int(input("two or three numbers, seperate with spaces.  a 0 is a placeholder:  "))
-#        return self.inp DatNum.split(' ')
+        return self.inpDat#What type of data is returned?
 
     def lmtReagent(self):
         #Setup vars/reset vars:
@@ -247,11 +244,11 @@ class Science:
     def GtoM(self):
         self.dat = self.inp()
         self.weight = round(float(input("Mass of compound:  "))/self.amu(self.dat), 8)
-        print(self.weight)
+        print("Moles: "+self.weight)
     def MtoG(self):
         self.dat = self.inp()
         self.weight = round(float(input("Moles of compound:  "))*self.amu(self.dat), 8)
-        print(self.weight)
+        print("Grams: "+self.weight)
     def convert(self):
         print("1: Grams to Moles")
         print("2: Moles to Grams")
@@ -262,6 +259,16 @@ class Science:
             self.MtoG()
         else:
             print("ERROR!")
+    def stoi(self):
+        self.GtoM()
+        
+#        self.dat = self.inp()
+#        self.weight = self.amu(self.dat)
+#        print(self.weight)
+#        print("Processing data...")
+        
+
+        
 #TO MAKE: MAIN
     def main(self):
         print("1: Limiting reagent")
