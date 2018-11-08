@@ -1,7 +1,7 @@
 ##Nathan Hinton
 #
 #TODO:
-#Make Main the hub for all of the science files.
+#Moving the extra nonBasic functions to the bottom and remaking them with newer functions and processing.
 
 #import stuff
 print("Importing")

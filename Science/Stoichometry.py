@@ -1,7 +1,7 @@
 ##Nathan Hinton
 #
 #TODO:
-#Make Main the hub for all of the science files.
+#Moving the extra nonBasic functions to the bottom and remaking them with newer functions and processing.
 
 #import stuff
 print("Importing")
@@ -16,7 +16,7 @@ class StateMachineError(Exception):
 #'Version', is fixing needed
 
 #Main class
-class Science:
+class Stoichometry:
 #########################Stuff to use for later input and data#################
     def __init__(self):#Version 1 unknown
         #Load the file as eleList
@@ -286,10 +286,10 @@ class Science:
             print("Input error or method not defined!")
         self.main()
 ################################################################################
-
-s = Science()
-S = Science()
-#Science.main(self)
-
-#Autorun:
-s.main()
+print("Autorun Stoichometry(Y, N)?")
+i = input()
+if i == 'Y':
+    s = Stoichometry()
+    s.main()
+else:
+    pass
