@@ -2,6 +2,8 @@
 #
 #TODO:
 #Make Main the hub for all of the science files.
+#Make a basics file for all the non dep stuff or make main where all of the stuff is stored.
+#Maybe make the state machine in another file... (And add state machines there.
 
 #import stuff
 print("Importing")
@@ -32,8 +34,6 @@ class Science:
         self.MOLE = 6.02*10**27
         self.item = None
         #return pklFile, eleList, valance, MOLE
-
-    #Calc Atom stuff
 
     def updatePkl(self, fname, pklFile):#Version 2 unknown:
         newDatFile = open(str(fname), 'r')
@@ -74,23 +74,29 @@ class Science:
             print("                !!!WARNING!!!")
             print("Unknown or unrecognized data type. returning empty list")
         return self.lst
-#REMOVED CalcAtom and main
-    def findAtom(self, char):#Version 1 unknown
-        for x in range(len(self.eleList)):
-            #print(eleList[x]) #Noise reduction
-            ele = self.PD(self.eleList[x])
-            #print()
-            #print(ele)
-            try:
-                if ele[1].lower() == str(char.lower()):
-                    print(ele)
-                    return(ele)
-                if ele == '':
-                    print("''")
-            except IndexError:
-                print("IndexError processed.")
-                print("Elemment not in the list or the abbr was typed wrong")
-                self.findAtom(input("Try again, element:  "))
+##########################Stoichometry####################################
+    def findAtom(self, inp):#Version 1 unknown
+        try:
+            print(self.eleList[int(inp)-1])
+        except ValueError:
+            for x in range(len(self.eleList)):
+                #print(eleList[x]) #Noise reduction
+                ele = self.PD(self.eleList[x])
+                #print()
+                #print(ele)
+                try:
+                    if ele[1].lower() == str(inp.lower()):
+                        print(ele)
+                        return(ele)
+                    if ele == '':
+                        print("''")
+                except IndexError:
+                    print("IndexError processed.")
+                    print("Elemment not in the list or the abbr was typed wrong")
+                    #self.findAtom(input("Try again, element:  "))
+
+        else:
+            print("input error for findAtom")
 
     def amu(self, eleDat):#Version 1 unknown
         self.result = 0
@@ -266,6 +272,12 @@ class Science:
 #        self.weight = self.amu(self.dat)
 #        print(self.weight)
 #        print("Processing data...")
+#####################################End Stoichometry#########################
+    def electronCount(self):
+        self.electrons = input("Electron count: ")
+        self.findAtom(self.electrons)
+    def electronConfig(self):
+        pass
         
 
         
@@ -274,6 +286,8 @@ class Science:
         print("1: Limiting reagent")
         print("2: Find element and data")
         print("3: Convert moles and grams")
+        print("4: electron counting")
+        print("5: Find atom")
         self.i = input()
         if self.i == '1':
             self.lmtReagent()
@@ -282,6 +296,10 @@ class Science:
             self.findAtom(input())
         elif self.i == '3':
             self.convert()
+        elif self.i == '4':
+            self.electronCount()
+        elif self.i == '5':
+            self.findAtom(input("Abbr of element: "))
         else:
             print("Input error or method not defined!")
         self.main()
