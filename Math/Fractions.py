@@ -24,19 +24,20 @@ class Fraction:
             self.t = self.t1*self.t2
             self.b = self.b*self.b
         elif self.equ == '/':
-            t = int(T1)*int(B2)
-            b = int(B1)*int(T2)
+            self.t = int(self.T1)*int(self.B2)
+            self.b = int(self.B1)*int(self.T2)
 
-        print(str(t) + " / " + str(b))
+        print(str(self.t) + " / " + str(self.b))
 
         while smaller == False:
             x = x+1
-            if b%x == 0 and t%x == 0:
-                t = t/x
-                b = b/x
-                print(str(t) + " / " + str(b))
+            if self.b%x == 0 and self.t%x == 0:
+                self.t = self.t/x
+                self.b = self.b/x
+                print(str(self.t) + " / " + str(self.b))
                 x = 1
-            if x >= b:
+            if x >= self.b:
                 smaller = True
 
 print("Done loading Fraction programms")
+print("!!!THIS PROGRAM HAS BEEN CONVERTED INTO A CLASS! IT MAY NOT FUNCTION IN OLDER PROGRAMS!!!")
