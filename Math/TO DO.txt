@@ -2,6 +2,8 @@ To Do:
 
 Finish going through the help files of the program.
 
+Change all of the programs to classes except the Quad, Triangle, and Fraction programs.
+
 FIXED!!!
 
 Can handle all of the errors.
