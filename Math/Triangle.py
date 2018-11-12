@@ -1,48 +1,51 @@
 ##Nathan Hinton
 ##
 ##This program calcluates the: area, uses pathag to find a missing side, uses
-##pathag to vhevk for a pathag tripple.
 
 ##To do:
+#Convert the program into a class.
 
-import math as m
+class Triangle:
+    def __init__(self):
+        import math as m
+        self.m = m
 
-def area():
-    base = input("base  ")
-    height = input("height  ")
-    print(int(base)*int(height)/2)
+    def area(self):
+        self.base = input("base  ")
+        self.height = input("height  ")
+        print(int(self.base)*int(self.height)/2)
 
-def pathag():
-    side1 = input("side1  ")
-    side2 = input("side2  ")
-    print(m.sqrt(int(side1)**2+int(side2)**2))
-    print()
-    print(int(side1)**2 + int(side2)**2)
-def permiter():
-    a = input("Side 1  ")
-    b = input("Side 2  ")
-    c = input("Side 3  ")
-    print(int(a)+int(b)+int(c))
+    def pathag(self):
+        self.side1 = input("side1  ")
+        self.side2 = input("side2  ")
+        print(self.m.sqrt(int(self.side1)**2+int(self.side2)**2))
+        print()
+        print(int(self.side1)**2 + int(self.side2)**2)
+    def permiter(self):
+        self.a = input("Side 1  ")
+        self.b = input("Side 2  ")
+        self.c = input("Side 3  ")
+        print(int(self.a)+int(self.b)+int(self.c))
 
-    ##start TRI help
-def help():
-    print("Help for TRI set")
-    print("""
-The way that this was designed was to make it so you enter TRI and that stands
-for Triangle, then you enter the first leters of what you want to do in caps
-and after the last capital leter you put the next leter of the function an
-lowercace.  Example: for the area of a triangle you put TRI with Ar for area
-right after to make TRIAr.
-    """)
-    print()
-    print("Here is a list of Triangle commands")
-    print("""
-TRI-------Show TRI help.
-TRIAr-----Triangle area.
-pathag---Triangle calcluate side for right triangle using pathag.
-TRIPe-----Triangle calcluate the permiter of a triangle
-    """)
-##end TRI help
+        ##start TRI help
+    def help(self):
+        print("Help for Triangle file")
+        print("""
+    This is the help function for the Triangle.py file.  Some things may be
+    outdated as you use different versions of the main program or just the
+    plain program.    """)
+        print()
+        print("""Here is a list of Triangle commands.  they are defined in the
+              Triangle file and if they are used with a wrapper they may be
+              different.""")
+        print("""
+    self.help()-------Show TRI help.
+    self.area()-----Triangle area.
+    self.pathag()---Triangle calcluate side for right triangle using pathag.
+    self.permiter()-----Triangle calcluate the permiter of a triangle
+        """)
+    ##end TRI help
 
 
-print("Done loading Triangle programms")
+print("Done loading Triangle programm")
+print("!!!THIS PROGRAM HAS BEEN CONVERTED INTO A CLASS! IT MAY NOT FUNCTION IN OLDER PROGRAMS!!!")
