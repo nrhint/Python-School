@@ -1,0 +1,81 @@
+11/13/2018:
+Notes about light.
+If you shine light on metal you can knock electrons loose off the metal.  This causes electricity to flow.  The kenetic energy of an electron that is knocked loose is equal to  1/2mv**2 where m is the mass and v is the velosity.  Freed electrons are refered to as photoelectron.  Photon-->Photoelectron.
+
+Energy of photon = Ep
+Energy to free electron = Eo
+Kenetic energy of photoelectron = KE
+
+Ep = Eo+KE
+KE = Ep-Eo
+
+Eo is the work function it will be different for every metal.  Eo is defined as the minimum amount of energy required to free the electron.
+
+Example problem:
+
+If a photon of wavelength 525nm hits metallic cesium (work function 3.43*10**-19), what is the velosity of the photoelectron produced?
+
+H = Plancks constant = 6.626*10**-34
+V = Frequency
+C = speed of light = 2.998*10**8
+M = mass of electron = 9.11*10**-31kg
+l = lambda = 525*10**-9 (The 10**9 is to convert to nm)
+u = nu
+
+
+Ep = H*V
+Doing conversion for equation:
+C = l*u
+C = V*wavelength
+V = c/l
+Therefore:
+Ep = (H*C)/l
+
+(6.626*10**-34)(2.998*10**8)
+----------------------------  = 3.78*10**-19Joules
+525*10**-9
+
+3.78*10**-19Joules>work function (3.43*10**-19) so the electron is freed.
+
+Finding the kenetic energy of the photoelectron:
+
+KE = Ep-Eo:
+Ep = 3.78*10**-19Joules
+Eo = 3.43*10**-19Joules
+3.5*10**-20Joules = 3.78*10**-19Joules -3.43*10**-19Joules
+KE = 3.5*10**-20Joules
+
+1/2*M*V**2 = KE
+
+V = 2.8**10**5
+
+Atomic number (Z) - The number of protons in a nucleus and the number of electrons in a neutral atom.
+
+neutral atom (atom) - When the number of protons and electrons are the same in a atom.  The atom will have no positive charge or negative charge.
+
+Ionic atoms - Any atom that is not neutral or has a different number of protons and electrons.
+
+Cation - A positive Ion
+Anion - A negative Ion.  Often the element has an IDE sufix at the end of the name. (Chlor+ide)
+
+Ionic Bond:  Wil come out neutural.  By knowing what is the 'IDE' part of the compound will let you know what the Cation element is.  The electron is moved from one atom to another
+Covelent bond:  The electron is shared by each atom.
+
+Protons (P)- Protons define the element that you are talking about.  You cant change the number of protons without changing the element.  A proton has a positive charge.
+
+isotopes - Atoms of a single element that differ in the number of neutrons in the nuclei
+
+Neutrons (N) - Has no charge and is found in the nucleus
+
+Electrons (E) - Are found in the shell or outer layers of the atom.  They have an negative charge.  This is where the variance for isotopes comes from.
+
+atomic mass number (A) - The combined number of protons and neutrons in a nucleus
+
+WAYS TO WRITE:
+When writing a element the superscript is the mass number, the subscript is the atomic number.  Mass number = Protons + Neutrons (A = Z+N).  To find the number of neutrons subtract A-Z.
+
+A chemical formulas the subscript os the number of atoms in the compound.
+
+Another way to write things are for example CH3COOH (C2 H4 O2 acetic acid) is called condenced structural formula.  The way that the elements are aranged in the order they are in the element.  
+
+To write a compound there are several ways.  Here are examples: H-H, H:H the compound is H2.
