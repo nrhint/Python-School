@@ -1,8 +1,8 @@
 1: Make a main file in the root folder to run and put together the tools.
-2: Fix up the math section, there are some errors in the prism section I think.
+2: Fix up the math section, there are some errors in the prism program I think.
 3: Also there is some cleaning and revising to do in the Math section.
 4: Update all the stuff in the Science/Main folder.  I converted all the definitions 
-into a class so I need to go and update vars for sharing.  Also i added its own 
+into a class so I need to go and update vars for sharing.  Also I added its own 
 input function(inp) for inputing data.  This means that all of the functions need to 
 be updated.
 5: Revise and release a new version of Science/Main.py for use
