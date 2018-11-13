@@ -18,10 +18,14 @@ class StateMachineError(Exception):
 #Main class
 class Stoichometry:
 #########################Stuff to use for later input and data#################
-    def __init__(self):#Version 1 unknown
+    def __init__(self, mode):#Version 1 unknown
         #Load the file as eleList
         print("Loading Element File")
-        self.pklFile = 'elementlist.pkl'
+        if mode == 'direct':
+            import sys
+            self.pklFile = sys.path[0]+'/Science/elementlist.pkl'
+        else:
+            self.pklFile = 'elementlist.pkl'
         self.dat = pickle.load(open(self.pklFile, 'rb'))#open('/NathanShare/School/Science2018-2019/elementlist.pkl', 'rb'))
         #dat = dat.read()
         self.dat = self.dat.replace('\n', '|')#Remove the newlines and add the pipes to seperate elements.
@@ -211,10 +215,10 @@ class Stoichometry:
         self.weight1 = round(float(input("Mass of first compound:  "))/self.amu(self.dat1), 8)
         self.weight2 = round(float(input("Mass of second compound:  "))/self.amu(self.dat2), 8)
         #Final code for comparisan and final output.
-        if self.mult1<s.mult2:
-            self.multLarge = s.mult2
+        if self.mult1<self.mult2:
+            self.multLarge = self.mult2
         else:
-            self.multLarge = s.mult1
+            self.multLarge = self.mult1
         print(self.multLarge)
         print(self.weight1, self.weight2)
         print(self.weight1/self.mult1, self.weight2/self.mult2)
@@ -289,7 +293,7 @@ class Stoichometry:
 print("Autorun Stoichometry(Y, N)?")
 i = input()
 if i == 'Y':
-    s = Stoichometry()
+    s = Stoichometry(None)
     s.main()
 else:
     pass

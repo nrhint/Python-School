@@ -7,9 +7,9 @@ class StateMachineError(Exception):
     pass
 
 #State machines.
-class ProcessInput:
+class StateMachine:
     def __init__(self):
-        print("Class ProcessInput created")
+        print("Class StateMachine created")
     def PC(self):#Version 1 Needs to have a ratio(nuber in front)
         #Process compound This is the first state machine I have Made!
         self.i = str(input("Compound: "))
