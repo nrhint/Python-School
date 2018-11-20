@@ -1,3 +1,28 @@
+11/20/2018:
+Molecular mass percentage.
+
+AMU is defines as 1 Carbon-12 is 12 AMU.
+
+C6H12O6 is gluecose.
+
+Assume that 1 proton or 1 newtron = 1
+C = 12 amu
+H = 1 amu
+O = 16 amu
+
+c6 = 72 amu
+H12 = 12 amu
+O6 = 96 amu
+
+mass of gluecose = 180 amu
+to find the percentages of the elements in the molecule you take the total amu and than divide the total weight of the atom in the element.  Therefore:
+72/180 = 40%
+12/180 = 6.7
+96/180 = 53.3%
+
+As H has a much smaller mass the percentage of the H is smaller by weight than any of the other elements.
+
+
 11/13/2018:
 Notes about light.
 If you shine light on metal you can knock electrons loose off the metal.  This causes electricity to flow.  The kenetic energy of an electron that is knocked loose is equal to  1/2mv**2 where m is the mass and v is the velosity.  Freed electrons are refered to as photoelectron.  Photon-->Photoelectron.
