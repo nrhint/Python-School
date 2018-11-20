@@ -17,7 +17,7 @@ O6 = 96 amu
 mass of gluecose = 180 amu
 to find the percentages of the elements in the molecule you take the total amu and than divide the total weight of the atom in the element.  Therefore:
 72/180 = 40%
-12/180 = 6.7
+12/180 = 6.7%
 96/180 = 53.3%
 
 As H has a much smaller mass the percentage of the H is smaller by weight than any of the other elements.

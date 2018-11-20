@@ -105,7 +105,7 @@ class Stoichometry:
             self.result += float(eleDat[w][3])
         return self.result
 #REMOVED stoi and stoi2 and limitReagent and SearchAtom
-    def Seperate(self, lst, item):#Version 1 unknown
+    def findInList(self, lst, item):#Version 1 unknown
         x = self.eleList[lst]
         try:
             return x[item]
@@ -270,6 +270,19 @@ class Stoichometry:
 #        self.weight = self.amu(self.dat)
 #        print(self.weight)
 #        print("Processing data...")
+    def Mwp(self):#Molecular weight percentages:
+        self.dat = self.inp()
+        #Count the stuff in the dat:
+        self.mp = {}
+        for x in range(len(self.dat)):
+            if self.dat[x][1] not in self.mp:
+                self.mp.update({self.dat[x][1]:1})
+            elif self.dat[x][1] in self.mp.keys():
+                self.num = self.mp[self.dat[x][1]]
+                print(self.num)
+                self.mp.update({self.dat[x][1]:(self.num+1)})
+                
+        print(self.mp)
         
 
         
@@ -278,6 +291,7 @@ class Stoichometry:
         print("1: Limiting reagent")
         print("2: Find element and data")
         print("3: Convert moles and grams")
+        print("4: Molecular weight percentages")
         self.i = input()
         if self.i == '1':
             self.lmtReagent()
@@ -286,6 +300,8 @@ class Stoichometry:
             self.findAtom(input())
         elif self.i == '3':
             self.convert()
+        elif self.i == '4':
+            self.Mwp()
         else:
             print("Input error or method not defined!")
         self.main()
