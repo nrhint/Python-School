@@ -176,8 +176,11 @@ class Stoichometry:
                     commit()
                     self.element += x
                     state = 'upper'
+                elif x.isdigit():
+                    self.number = self.number*10
+                    self.number += int(x)
                 else:
-                    raise StateMachineError("@ Digit expected upper or digit", state)
+                    raise StateMachineError("@ Digit expected upper", state)
             else:
                 raise StateMachineError("@StateMachine expected something, I dont know what", state)
         commit()
@@ -274,24 +277,58 @@ class Stoichometry:
         self.dat = self.inp()
         #Count the stuff in the dat:
         self.mp = {}
+##        #This adds each molicule to the list to a map
+##        for x in range(len(self.dat)):
+##            if self.dat[x][1] not in self.mp:
+##                self.mp.update({self.dat[x][1]:1})
+##            elif self.dat[x][1] in self.mp.keys():
+##                self.num = self.mp[self.dat[x][1]]
+##                print(self.num)
+##                self.mp.update({self.dat[x][1]:(self.num+1)})
+##        #Take the mapped values and then
+        self.total = 0
         for x in range(len(self.dat)):
             if self.dat[x][1] not in self.mp:
-                self.mp.update({self.dat[x][1]:1})
+                self.total += float(self.dat[x][3])
+                self.mp.update({self.dat[x][1]:self.dat[x][3]})
             elif self.dat[x][1] in self.mp.keys():
+                self.total += float(self.dat[x][3])
                 self.num = self.mp[self.dat[x][1]]
                 print(self.num)
-                self.mp.update({self.dat[x][1]:(self.num+1)})
-                
+                self.mp.update({self.dat[x][1]:(round(float(self.num)+float(self.dat[x][3]), 4))})
+        self.total = round(self.total, 4)
+        #calculate the percentages
         print(self.mp)
-        
+        print(self.total)
+        print()
+        for x in self.mp:
+            print(x+' : %'+str((self.mp[x]/self.total)*100))
 
-        
-#TO MAKE: MAIN
+    def MassCompToEmp(self):
+        run = True
+        self.pct = []
+        self.atm = []
+        #Take the input from user
+        while run == True:
+            self.atm.append(input("Atom: "))
+            self.pct.append(int(input("Atom Percent: ")))
+            if input("Finished? Y or nothing: ") == 'Y':
+                run = False
+        #Process input and calculate moles:
+        print(self.atm)
+        print(self.pct)
+        for x in range(len(self.atm)):
+            dat = self.findAtom(self.atm[x])
+            print(dat[3])
+            print(self.pct[x])
+            
+
     def main(self):
         print("1: Limiting reagent")
         print("2: Find element and data")
         print("3: Convert moles and grams")
         print("4: Molecular weight percentages")
+        print("5: Mass composition to empirical")
         self.i = input()
         if self.i == '1':
             self.lmtReagent()
@@ -302,6 +339,8 @@ class Stoichometry:
             self.convert()
         elif self.i == '4':
             self.Mwp()
+        elif self.i == '5':
+            self.MassCompToEmp()
         else:
             print("Input error or method not defined!")
         self.main()

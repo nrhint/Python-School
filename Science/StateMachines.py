@@ -7,10 +7,11 @@ class StateMachineError(Exception):
     pass
 
 #State machines.
-class ProcessInput:
+class ProcessInputClass:
     def __init__(self):
         print("Class ProcessInput created")
-    def PC(self):#Version 1 Needs to have a ratio(nuber in front)
+    def ProcessInput(self):
+        print("This will return a list of what you put in.")
         #Process compound This is the first state machine I have Made!
         self.i = str(input("Compound: "))
 
@@ -79,4 +80,4 @@ class ProcessInput:
             else:
                 raise StateMachineError("@StateMachine expected something, I dont know what", state)
         commit()
-        return self.finalData
+        return self.finalData, self.mult
