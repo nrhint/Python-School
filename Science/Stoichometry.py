@@ -321,7 +321,16 @@ class Stoichometry:
             dat = self.findAtom(self.atm[x])
             print(dat[3])
             print(self.pct[x])
-            
+    def calcValance(self):
+        self.dat = self.inp()
+        self.num = int(self.dat[0][0])
+        run = True
+        for x in self.valance:
+            if self.num>x:
+                print(self.num-x)
+            else:
+                self.v = x
+                break
 
     def main(self):
         print("1: Limiting reagent")
@@ -329,6 +338,7 @@ class Stoichometry:
         print("3: Convert moles and grams")
         print("4: Molecular weight percentages")
         print("5: Mass composition to empirical")
+        print("6: Calculate valance electrons")
         self.i = input()
         if self.i == '1':
             self.lmtReagent()
@@ -341,6 +351,8 @@ class Stoichometry:
             self.Mwp()
         elif self.i == '5':
             self.MassCompToEmp()
+        elif self.i == '6':
+            self.calcValance()
         else:
             print("Input error or method not defined!")
         self.main()
@@ -351,4 +363,4 @@ if i == 'Y':
     s = Stoichometry(None)
     s.main()
 else:
-    pass
+    s = Stoichometry(None)

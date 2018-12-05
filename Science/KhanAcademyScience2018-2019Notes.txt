@@ -1,3 +1,10 @@
+12/4/2018:
+Ionic bonds and Coulobs law.
+
+Elecrticstatic force = k*(Charge1*Charge2/Distance between charges**2)
+Fe = k*(q1*q1/r**2)
+r = sum of ionic radii of the ions
+
 11/28/2018:
 Molecular weight percentages. NOT MOLECULAR MASS PERCENTAGE SEE 11/20/2018.
 
