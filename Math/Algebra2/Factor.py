@@ -23,6 +23,16 @@ def factor(num):
             lastFact = x
     return factors
 
+def findCommon(i):
+    num = 1
+    for x in i:
+        num*x
+    f = factor(num)
+    for x in f:
+        for n in i:
+            if x%x == 0
+                print(x)
+
 def findSquares(num):
     facts = factor(num)
     facts.sort()
