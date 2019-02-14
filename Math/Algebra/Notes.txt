@@ -1,3 +1,7 @@
+﻿Algebra 2 Lesson 2:
+    • You can only compare or combine (add or subtract) two fractions of the same “kind” i.e. that have the same denominator.
+    • Multiplying or dividing by 1 does not change the value of a fraction.
+
 Notes on powering things:
 
 1/(x^^-y) = x^^y
