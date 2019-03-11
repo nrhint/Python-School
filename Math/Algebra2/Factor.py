@@ -3,9 +3,11 @@
 ##I plan to use it for factoring radicals
 ##See https://codereview.stackexchange.com/questions/144041/reduce-square-root-to-simplest-radical-form
 ##For source/reference
+print("Initalizing Factor.py")
 from math import sqrt
 
 def reduced_sqrt(n):
+    n = int(n)
     try:
         root = int(sqrt(n))
     except ValueError:
@@ -18,6 +20,7 @@ def reduced_sqrt(n):
     return (1, n)
 
 def print_reduced_sqrt(n):
+    n = int(n)
     coefficient, reduced = reduced_sqrt(n)
     if coefficient == 1:
         print('\u221A', reduced)
