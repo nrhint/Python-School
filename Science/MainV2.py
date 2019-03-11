@@ -250,11 +250,11 @@ class Science:
     def GtoM(self):
         self.dat = self.inp()
         self.weight = round(float(input("Mass of compound:  "))/self.amu(self.dat), 8)
-        print("Moles: "+self.weight)
+        print("Moles: "+str(self.weight))
     def MtoG(self):
         self.dat = self.inp()
         self.weight = round(float(input("Moles of compound:  "))*self.amu(self.dat), 8)
-        print("Grams: "+self.weight)
+        print("Grams: "+str(self.weight))
     def convert(self):
         print("1: Grams to Moles")
         print("2: Moles to Grams")
