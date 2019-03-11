@@ -6,6 +6,7 @@ import Factor
 import takeInput
 
 def trinomial():
+    #x**2+(a+b)x+ab
     i = takeInput.rawInput()
     seperate = i.split('+')
     print(seperate)
