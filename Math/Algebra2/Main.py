@@ -19,20 +19,47 @@ def tsplit(string, delimiters):
                 stack.insert(i+j, _substring)
     return stack
 
-def calcTri(a, b):
-    x1 = 0
-    x2 = 0
-    while x1 < a:
-        x1 +=1
-        x2 = 0
-        #print('x1:%s'%+x1)
-        while x2 < a:
-            x2 +=1
-            #print('x2:%s'%+x2)
-            if x1+x2 == a and x1*x2 == b:
-                return(x1, x2)
+def calcTri(mult, a, b):#V2
+    #x+y = a
+    #x*y = b
+    #Get the sets of factors.
+    sets = []
+    nums = Factor.factor(b)
+    for x in range(int(len(nums)/2)):
+        sets.append([nums[x*2], nums[x*2+1]])
+    #there should be 4 combonations for wach set of numbers.
+    for s in sets:
+        if s[0]+mult*s[1] == a:#If they are both positive:
+            return s[0], s[1]
+        elif -s[0]+mult*s[1] == a:#If the first is neg:
+            return -s[0], s[1]
+        elif s[0]+-mult*s[1] == a:#If the second is neg:
+            return s[0], -s[1]
+        elif -s[0]+-mult*s[1] == a:#If both are is neg:
+            return -s[0], -s[1]
+    
+def extractNum(string):#V1
+    #This will extract numbers from the begining of strings.
+    final = 0
+    temp = []
+    neg = 1
+    for s in range(len(string)):
+        try:
+            if string[s] == '-':
+                neg = -1
+            else:
+                i = int(string[s])
+                temp.append(i)
+        except ValueError:
+            break
+    #print(temp)
+    for x in range(len(temp)):
+        #print(temp[x]*10**(len(temp)-x-1))
+        final += temp[x]*10**(len(temp)-x-1)
+    return final*neg
+                
 
-def trinomial():
+def trinomial():#V1
     #x**2+(a+b)x+ab
     #Forms:
     #x**2+7x+12
@@ -41,25 +68,12 @@ def trinomial():
     seperate = tsplit(i, ('-', '+'))
     print(seperate)
     #print(seperate[1])
-    x = seperate[1][0]
-    neg = False
-    if x == '-':
-        neg = True
-        poly1 = int(seperate[1][1])
-    else:
-        poly1 = int(seperate[1][0])
-    x = seperate[2][0]
-    if x == '-':
-        neg = True
-        poly2 = int(seperate[2][1])
-    else:
-        poly2 = int(seperate[2])
-    a, b = calcTri(poly1, poly2)
+    mult = extractNum(seperate[0])
+    poly1 = extractNum(seperate[1])
+    poly2 = extractNum(seperate[2])
+    a, b = calcTri(mult, poly1, poly2)
     print(a, b)
-    print(neg)
-    if neg == True:
-        print('(x-%i)(x+%i)'%(a, b))
-    print('(x+%i)(x+%i)'%(a, b))
+    print('(%ix+%i)(x+%i)'%(mult, a, b))
     return seperate
 
 #Main loop:
@@ -85,4 +99,3 @@ while mainLoop == True:
         print("In Progress.")
     else:
         print("Invalid input: %s" %ans)
-
