@@ -32,6 +32,20 @@ CUBPe-----Cuboid calcluate the total edge length of a square--Not sure why thisi
     """)
 ##end CUB help
 
+def run():
+    print("1:area")
+    print("2:volume")
+    print("3:perimeter")
+    i = input()
+    if i == '1':
+        area()
+    elif i == '2':
+        volume()
+    elif i == '3':
+        permiter()
+    else:
+        print("Invalid input")
+
 print("Done loading Cuboid programms")
 
 """

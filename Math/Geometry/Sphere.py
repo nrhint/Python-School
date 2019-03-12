@@ -8,7 +8,18 @@ def help():
     print("""
 No help for this module.
 
-Area ad Volume are defined.
+Area and Volume are defined.
 """)
 
-print("Done loasing Sphere Programs")
+def run():
+    print("1:area")
+    print("2:volume")
+    i = input()
+    if i == '1':
+        area()
+    elif i == '2':
+        volume()
+    else:
+        print("Invalid input")
+
+print("Done loading Sphere Programs")

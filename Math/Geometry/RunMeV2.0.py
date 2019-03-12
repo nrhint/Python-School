@@ -11,14 +11,18 @@ import Cylinder
 import Fractions
 import Prism ##May be having troubles.
 import Sphere
-import Square
+import Quad
 import Triangle
 
 print("Done loading the programs.  Thanks!")
 
 print("Creating user interface...")
 run = True
+for x in range(0, 60):
+    print()
 while run == True:
+    print()
+    print()
     print("0:exit")
     print("1:circle")
     print("2:cuboid")
@@ -26,7 +30,7 @@ while run == True:
     print("4:fractions")
     print("5:prism")
     print("6:sphere")
-    print("7:square")
+    print("7:quad")
     print("8:triangle")
     i = input()
     if i == '0':
@@ -45,7 +49,7 @@ while run == True:
     elif i == '6':
         Sphere.run()
     elif i == '7':
-        Square.run()
+        Quad.run()
     elif i == '8':
         Triangle.run()
     else:

@@ -39,5 +39,9 @@ class Fraction:
             if x >= self.b:
                 smaller = True
 
+def run():
+    f = Fraction()
+    f.run()
+
 print("Done loading Fraction programms")
 print("!!!THIS PROGRAM HAS BEEN CONVERTED INTO A CLASS! IT MAY NOT FUNCTION IN OLDER PROGRAMS!!!")

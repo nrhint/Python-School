@@ -45,5 +45,34 @@ class Quad:
     def __init__(self):
         print("THIS IS A BLANK CLASS TO BE DEVELOPED!!!")
 
+def run():
+    print("1:square")
+    print("2:rect")
+    i = input()
+    if i == '1':
+        s = Square()
+        print("1:area")
+        print("2:permiter")
+        i = input()
+        if i == '1':
+            s.area()
+        elif i == '2':
+            s.permiter()
+        else:
+            print("Invalid input")
+    elif i == '2':
+        r = Rectangle()
+        print("1:area")
+        print("2:permiter")
+        i = input()
+        if i == '1':
+            r.area()
+        elif i == '2':
+            r.permiter()
+        else:
+            print("Invalid input")
+    else:
+        print("Invalid Input")
+
 print("Done loading Quad programms")
 print("!!!THIS PROGRAM HAS BEEN CONVERTED INTO A CLASS! IT MAY NOT FUNCTION IN OLDER PROGRAMS!!!")

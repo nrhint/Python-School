@@ -13,4 +13,15 @@ def volume():
 def help():
     print("NEEDS WORK")
 
+def run():
+    print("1:area")
+    print("2:volume")
+    i = input()
+    if i == '1':
+        area()
+    elif i == '2':
+        volume()
+    else:
+        print("Invalis Input")
+
 print("Done loading Prism programs.  May need help.  Be careful using this portion.")

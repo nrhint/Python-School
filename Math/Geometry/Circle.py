@@ -24,4 +24,15 @@ CIRPe-----Circle calcluate the permiter of a triangle
     """)
 ##end CIR help
 
+def run():
+    print("1:area")
+    print("2:permiter")
+    i = input()
+    if i == '1':
+        area()
+    elif i == '2':
+        permiter()
+    else:
+        print("Invalid Input")
+
 print("Done loading Circle programms")

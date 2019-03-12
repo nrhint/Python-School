@@ -23,4 +23,15 @@ def volume():
     except ValueError:
         print(float(r)**2*p*float(h))
 
+def run():
+    print("1:area")
+    print("2:voume")
+    i = input()
+    if i == '1':
+        area()
+    elif i == '2':
+        volume()
+    else:
+        print("Invalid input")
+
 print("Done loading Cylinder programs")

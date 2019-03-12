@@ -20,7 +20,7 @@ class Triangle:
         self.side2 = input("side2  ")
         print(self.m.sqrt(int(self.side1)**2+int(self.side2)**2))
         print()
-        print(int(self.side1)**2 + int(self.side2)**2)
+        print("Raw:"+str(int(self.side1)**2 + int(self.side2)**2))
     def permiter(self):
         self.a = input("Side 1  ")
         self.b = input("Side 2  ")
