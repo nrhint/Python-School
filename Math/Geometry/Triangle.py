@@ -46,6 +46,19 @@ class Triangle:
         """)
     ##end TRI help
 
-
+def run():
+    t = Triangle()
+    print("1:area")
+    print("2:pathag")
+    print("3:permiter")
+    i = input()
+    if i == '1':
+        t.area()
+    elif i == '2':
+        t.pathag()
+    elif i == '3':
+        t.premiter()
+    else:
+        print("Invalid input")
 print("Done loading Triangle programm")
 print("!!!THIS PROGRAM HAS BEEN CONVERTED INTO A CLASS! IT MAY NOT FUNCTION IN OLDER PROGRAMS!!!")

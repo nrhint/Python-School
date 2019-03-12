@@ -1,0 +1,5 @@
+This file will contin the instructions for using this repo. Mostly the math section is the part that I will focous on as the other parts are not realy intended for others.
+
+To use the math part you will need to enter the Math folder then choose the correct folder for what you wnat to do.
+Each folder should have a main.py or a runMe.py program. This should have a user interface but I am not sure how well they work. I made them so that I could use the interface. I am going to work on the geo interface so that it is easier to use and cleaner.
+
