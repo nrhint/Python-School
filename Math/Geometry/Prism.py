@@ -4,7 +4,7 @@ def area():
     d = int(input("Depth:  "))
     h = int(input("Height:  "))
     sh = int(input("Slant height:  "))
-    print(((h*w)+(w*d)+(d*sh))*2)
+    print(h*d+sh*d+w*d+w*h)
 def volume():
     w = int(input("Width:  "))
     d = int(input("Depth:  "))
