@@ -1,0 +1,27 @@
+03/12/2019
+Factor Trinomials with coefficients:
+2x^2+7x+6=(2x+3)(x+2)
+To check you can use FOIL:
+First * First
+Outer * Outer
+Inner * Inner
+Last  *  Last
+ 
+Difference of 2 squares:
+a^2-b^2 = (a+b)(a-b)
+
+when factoring the answer is the sqrt of the first and third terms
+
+Trinomials:
+
+With a neg:
+x^2-1x-12 = (x-3)(x+4)
+			-3+4=1, -3*4=-12
+x^2-7x+12 = (x-3)(x-4)
+			-3+-4=-7, -3*-4=+12
+
+03/11/2019 
+Trinomials:
+
+x^2+7x+12 = (x+3)(x+4)
+x^2+(a+b)x+(a*b)=(x+a)(x+b)

@@ -28,3 +28,14 @@ def print_reduced_sqrt(n):
         print(coefficient)
     else:
         print(coefficient, '\u221A', reduced)
+
+def factor(n):
+    count = 0;
+    number = int(n)
+    for i in range(2, number-1):
+        if number%i == 0:
+            print(i)
+            i += 1
+            count += 1
+    if count==0:
+        print(number,"is a prime number.")
