@@ -5,6 +5,20 @@ print("Setting up...")
 import Factor
 import takeInput
 
+#tsplit came from:
+#http://code.activestate.com/recipes/577616-split-strings-w-multiple-separators/
+def tsplit(string, delimiters):
+    """Behaves str.split but supports multiple delimiters."""
+    delimiters = tuple(delimiters)
+    stack = [string,]
+    for delimiter in delimiters:
+        for i, substring in enumerate(stack):
+            substack = substring.split(delimiter)
+            stack.pop(i)
+            for j, _substring in enumerate(substack):
+                stack.insert(i+j, _substring)
+    return stack
+
 def calcTri(a, b):
     x1 = 0
     x2 = 0
@@ -24,21 +38,27 @@ def trinomial():
     #x**2+7x+12
     #(x+a)(x+b)
     i = takeInput.rawInput()
-    seperate = i.split('+')
+    seperate = tsplit(i, ('-', '+'))
     print(seperate)
     #print(seperate[1])
-    for x in range(len(seperate[1])):
-        if x == '-':
-            poly1 = int(seperate[1][0:1])
-        else:
-            poly1 = int(seperate[1])
-    for x in range(len(seperate[2])):
-        if x == '-':
-            poly2 = int(seperate[2][0:1])
-        else:
-            poly2 = int(seperate[2])
+    x = seperate[1][0]
+    neg = False
+    if x == '-':
+        neg = True
+        poly1 = int(seperate[1][1])
+    else:
+        poly1 = int(seperate[1][0])
+    x = seperate[2][0]
+    if x == '-':
+        neg = True
+        poly2 = int(seperate[2][1])
+    else:
+        poly2 = int(seperate[2])
     a, b = calcTri(poly1, poly2)
     print(a, b)
+    print(neg)
+    if neg == True:
+        print('(x-%i)(x+%i)'%(a, b))
     print('(x+%i)(x+%i)'%(a, b))
     return seperate
 
