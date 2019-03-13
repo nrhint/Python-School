@@ -1,0 +1,18 @@
+HTTrack3.49-2 launched on Tue, 12 Mar 2019 17:49:02 at https://www.w3schools.com/html/default.asp https://www.w3schools.com/css/default.asp
+(winhttrack https://www.w3schools.com/html/default.asp https://www.w3schools.com/css/default.asp -W -O "/media/nathan/0062-DBB8/Projects/Python-School/HtmlCss/w3school" -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+18:14:16	Error: 	"Not Found" (404) at link https://www.w3schools.com/html/POST (from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default)
+18:14:16	Error: 	"Not Found" (404) at link https://www.w3schools.com/html/GET (from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default)
+18:14:16	Error: 	"Not Found" (404) at link https://www.w3schools.com/html/exercise.asp?filename=exercise_ (from https://www.w3schools.com/html/exercise.asp?filename=exercise_html_attributes1)
+18:15:04	Error: 	"Not Found" (404) at link https://www.w3schools.com/css/POST (from https://www.w3schools.com/css/tryit.asp?filename=trycss_default)
+18:15:04	Error: 	"Not Found" (404) at link https://www.w3schools.com/css/GET (from https://www.w3schools.com/css/tryit.asp?filename=trycss_default)
+18:15:04	Error: 	"Not Found" (404) at link https://www.w3schools.com/html/img_typo.jpg (from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_alt_error)
+18:15:04	Error: 	"Not Found" (404) at link https://www.w3schools.com/html/wrongname.gif (from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_images_wrongname)
+
+HTTrack Website Copier/3.49-2 mirror complete in 26 minutes 3 seconds : 1535 links scanned, 1527 files written (80426249 bytes overall) [29183640 bytes received at 18671 bytes/sec], 71936057 bytes transferred using HTTP compression in 1407 files, ratio 27%
+(7 errors, 0 warnings, 0 messages)
