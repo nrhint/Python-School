@@ -11,8 +11,8 @@ def temp():#V1
     else:
         print("Invalid Input")
 
-def meteric():
-    l = ['u' 'mm', 'd', 'm', 'M', 'k', 'c']
+def distanceMetric():
+    units = {k:1000, M:1, dc:0.1, cm:0.01, m:0.001, u:0.000001, n:0.000000001, p:0.000000000001}
     dist = float(input("Distance: "))
     curr = str(input("Current meteric: "))
     to = str(input("Convert to: "))
