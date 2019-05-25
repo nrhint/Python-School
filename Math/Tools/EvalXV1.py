@@ -53,7 +53,6 @@ def moveX(i):
                 state = 'end'
         elif state == 'multDiv':
             temp = i
-        #try:
             splt = temp.split('x')#Find a place where x is.
             xexpr = splt[0]
             #Check for multuplication:
@@ -63,8 +62,6 @@ def moveX(i):
                 loop = 1
                 end = 0
                 for x in range(-l+2, 1):
-##                    print("LOOPING")
-##                    print(x)
                     num = ''
                     item = xexpr[-x]
                     #print(item)
@@ -77,10 +74,7 @@ def moveX(i):
                     elif item == '-':
                         end = -x
                     else:
-##                        print(item)
-##                        print(loop)
                         num +=str(int(item)*10**(loop-1))
-##                        print(num)
                     loop += 1
                 if side == 'left':
                     tmpExpr = right+'/'+str(num)
@@ -88,13 +82,13 @@ def moveX(i):
                     print('left')
                 else:
                     tmpExpr = left+'/'+str(num)
-            #print(tmpExpr)
-            print(output)
-            state = 'end'
+            i = i.replace('*', '&', 1)#remove the * from the equation
+            state = 'test'
         elif state == 'addSub':
             pass
         elif state == 'end':
             print("Finished")
+            print(output)
             return output
 def testV2():#Goal: make it so that you can move the x around
     print("Test V2")
