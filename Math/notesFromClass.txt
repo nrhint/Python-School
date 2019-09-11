@@ -1,15 +1,100 @@
 Nathan Hinton
+Sep 10 2019
+Aleks Math
+
+Topic:
+Linear Inequalties type 4
+
+|15-5x| < 10
+------------
+      5
+
+|3-x| < 2
+x-3+3 < 2+3
+1 < x < 5
+
+---------------------------------------------
+
+|3u-3| <= 6
+-----------
+     3
+
+|u-1| <= 2
+u-1+1 <= 2+1
+-1 <= u <= 3
+
+---------------------------------------------
+
+|2u-5| >= 9
+|2u| >= 14 (added 5 to both sides)
+|u| >= 7 (divided by 2)
+
+u <= -2
+u >= 7
+
+---------------------------------------------
+
+|9-3x| > 6
+|3-x| > 2 (divided by 3)
+x > 5 (added 3)
+
+1 > x > 5
+
+---------------------------------------------
+
+(a)
+|6v-21| < 9
+|6v| < 30 (add 21)
+|v| < 5 (divide by 6)
+
+(b)
+|6v-21| < -9
+|6v| < 12 (add 21)
+|v| < 2 (divide by 6)
+
+2 < v < 5
+
+Topic:
+Linear Inequalties type 3
+
+|v-5| => 5
+
+v-5+5 => 5+5
+v => 10 and v <= 0
+
+---------------------------------------------
+
+|y-3| <= 6
+
+y-3+3 <= 6+3
+y <= 9 and y => -3
+
+---------------------------------------------
+
+|x+6| < 4
+
+x+6-6 < 4-6
+x < -2
+
+---------------------------------------------
+
+|v-2| => 2
+
+v-2+2 => 2+2
+v => 4 and v <= 0
+
+Nathan Hinton
 Sep 9 2019
 Aleks Math
 
 Topic:
-Linear Inequalties
+Linear Inequalties type 3
 
 |A| < c is equivalent to -c < A < c
 |A| <= c is equivalent to -c <= A <= c
 
 |A| > c is equivalent to A < -c or A > c
-|A| >= c is equavalent to A <= -c or A => c
+|A| >= c is equavalent to A <= -c or A >= c
 
 
 |u+2|<=4
@@ -27,6 +112,6 @@ solve for u as follows:
 
 -------------------------------------------
 
-|v-5| => 5
+|v-5| >= 5
 
-V-5+5 => 5+5
+V-5+5 >= 5+5

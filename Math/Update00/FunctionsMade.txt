@@ -1,0 +1,4 @@
+Nathan Hinton
+These are the functions that are finished in the tools.py file:
+
+fraction adder
