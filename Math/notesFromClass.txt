@@ -1,4 +1,31 @@
 Nathan Hinton
+Sep 17 2017
+Aleks Math
+
+Topic:
+Finding slopes of lines parallel and perpendicular to a line given in the form Ax + By = C
+
+-8x-3y=8
+-3y=8x+8
+y=(8x+8)/-3
+y = 8x/-3+8/-3
+
+
+-----------------------------------------------
+
+-x-6y=-4
+-6y=x-4
+y=(x-4)/-6
+y = (x/-6)-(4/6)
+
+
+-----------------------------------------------
+2y=5x+7
+y=(5x+7)/2
+
+
+
+Nathan Hinton
 Sep 10 2019
 Aleks Math
 

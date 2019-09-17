@@ -4,7 +4,13 @@
 from time import sleep
 from random import randint as rint
 
+def imperialToMetric(ft, i):
+    inches = (ft*12)+i
+    cm = inches*2.54
+    return cm
+
 def fraction(i = True):
+    print()
     if i == True:
         print("For division nter a double slash: \"//\"")
         i = input('Enter equation: ')
@@ -71,17 +77,86 @@ def fraction(i = True):
 #            print('%s/%s'%(finalTop, finalBottom))
             state = 'reduce'
         elif state == 'reduce':
+            changed = False
             for x in range(2, abs(finalBottom)+1):
                 if finalTop%x == 0 and finalBottom%x == 0:
 #                    print(x)
-                    finalTop = finalTop/2
-                    finalBottom = finalBottom/2
+                    changed = True
+                    finalTop = int(finalTop/x)
+                    finalBottom = int(finalBottom/x)
                     break
-            state = 'end'
+            if changed == False:
+                state = 'end'
+            #state = 'end'
 #        sleep(1)
     print('%s/%s'%(int(finalTop), int(finalBottom)))
     return (int(finalTop), int(finalBottom))
 
+def slopeInterceptFormGetSlope(i = True, autoReduce = True):
+    print()
+    if i == True:
+        print('manualInput')
+        i = input()
+    #Example: 10x+4y=-4
+    #Step one: move the x to the correct side of the equation:
+    xExpr = i[i.index('=')+1:i.index('x')+1]
+##    print(xExpr)
+    xMult = 0
+    xMult += int(i[i.index('=')+1:i.index('x')])
+##    print(xExpr, xMult)
+    yExpr = i[:i.index('y')+1]
+    yMult = 0
+    yMult += int(i[:i.index('y')])
+##    print(yExpr, yMult)
+    b = int(i[i.index('x')+1:])
+##    print(b)
+    if autoReduce != True:
+        print('slope is %s/%s'%(xMult, yMult))
+        slope = '%s/%s'%(xMult, yMult)
+        print('b is %x/%s'%(b, yMult))
+        b = '%x/%s'%(b, yMult)
+    else:
+        slope = fraction(i = '%sr%s'%(xMult, yMult))
+        b = fraction(i = '%sr%s'%(b, yMult))
+    return '%s/%s'%(slope[0], slope[1])
+
+def equationOfLineToSlopeInterceptForm(i = True, autoReduce = True):
+    print()
+    if i == True:
+        print('manualInput')
+        i = input()
+    #Example: 10x+4y=-4
+    #Step one: move the x to the correct side of the equation:
+    xExpr = i[:i.index('x')+1]
+    xMult = 0
+    xMult += int(i[:i.index('x')])
+##    print(xExpr, xMult)
+    yExpr = i[i.index('x')+1:i.index('y')+1]
+    yMult = 0
+    yMult += int(i[i.index('x')+1:i.index('y')])
+##    print(yExpr, yMult)
+    b = int(i[i.index('=')+1:])
+##    print(b)
+    if autoReduce != True:
+        print('slope is %s/%s'%(-xMult, yMult))
+        slope = '%s/%s'%(-xMult, yMult)
+        print('b is %x/%s'%(b, yMult))
+        b = '%x/%s'%(b, yMult)
+    else:
+        slope = fraction(i = '%sr%s'%(-xMult, yMult))
+        b = fraction(i = '%sr%s'%(b, yMult))
+    return '%s/%s'%(slope[0], slope[1])
+
+def checkForParallelOrPerpendicular(slope1, slope2):
+    if slope1 == slope2:
+        print("Parallel lines with a slope of %s and %s"%(slope1, slope2))
+    else:
+        out = fraction(i = '%s*%s'%(slope1, slope2))
+        if out == (-1, 1):
+            print('Perpendicular lines with a slope of %s ad %s'%(slope1, slope2))
+        else:
+            print('Slopes are neither Parallel or perpendicular')
+    
 def EQOLBTP(point1, point2):
     #m = (y2-y1)/(x2-x1)
     top = point2[1]-point1[1]
@@ -101,16 +176,43 @@ def EQOLBTP(point1, point2):
     print(b)
     print('y=%s x+%s'%('%s/%s'%(m[0], m[1]), '%s/%s'%(b[0], b[1])))
 
+def perpendicularLinePassingThroughPoint(slope, pointx, pointy):
+    print('y = %s*x+b'%slope)
+    print('%s = %s*%s+b'%(pointy, slope, pointx))
+    x = fraction(i = '%s*%s/1'%(slope, pointx))
+    print(x)
+    b = fraction(i = '%s/1+%s/%s'%(pointy, -x[0], x[1]))
+    print(b)
+
+def parallelLinePassingThroughPoint(slope, pointx, pointy):
+    print('y = %s*x+b'%slope)
+    print('%s = %s*%s+b'%(pointy, slope, pointx))
+    x = fraction(i = '%s*%s/1'%(slope, pointx))
+    print(x)
+    b = fraction(i = '%s/1--%s/%s'%(pointy, x[0], x[1]))
+    print(b)
+
 print("""
 Functions in the file:
 fraction('str')
-equation of line between two points. EQOLBTP(point1, point2)
+equationOfLineToSlopeInterceptForm(i = True, autoReduce = True)
+EQOLBTP(point1, point2) equation of line between two points.
+imperialToMetric(ft, in) convert to cm.
+checkForParallelOrPerpendicular(slope1, slope2)
+slopeInterceptFormGetSlope(i = True, autoReduce = True)
+perpendicularLinePassingThroughPoint(slope, (pointx, pointy))
+parallelLinePassingThroughPoint(slope, pointx, pointy)
 """)
 
-####Here are the test calls for the functions.
-#fraction(i = '1/2+1/4')
-#fraction(i = '1/2-1/4')
-#fraction(i = '1/2*1/4')
-#fraction(i = '1/2//1/4')
-#EQOLBTP((-1, -5), (-5, 1))
-
+######Here are the test calls for the functions.
+##fraction(i = '1/2+1/4')
+##fraction(i = '1/2--1/4')
+##fraction(i = '1/2*1/4')
+##fraction(i = '1/2//1/4')
+##EQOLBTP((-1, -5), (-5, 1))
+##s1 = equationOfLineToSlopeInterceptForm(i = '10x+4y=-4', autoReduce = True)
+##s2 = slopeInterceptFormGetSlope(i = '2y=5x+7')
+##checkForParallelOrPerpendicular(s1, s2)
+perpendicularLinePassingThroughPoint('3/4', -6, 4)
+print('--------------------------------------')
+parallelLinePassingThroughPoint('-3/4', -6, 4)
