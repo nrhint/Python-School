@@ -1,5 +1,944 @@
 Nathan Hinton
-Sep 17 2017
+Dec 5 2019
+Aleks math
+
+Finding the final amount in a word problem on compound interest
+
+EXAMPLE:
+
+Suppose that 2000 is loaned at a rate of 15%, compounded monthly. Assuming that no payments are made, find the amount owed after 5 years.
+Do not round any intermediate computations, and round your answer to the nearest cent.
+
+The fina amount A owed is given by the compound intrest formula:
+
+A=P(1+r/n)^nt
+
+P=2000 (starting amount)
+r=15% = 0.15 (Interest rate)
+n=12 (number of times per year)
+t=5 (Total time in years)
+
+
+Nathan Hinton
+Dec 4 2019
+Aeks math
+
+Finding the initial amount and rate of change given an exponential function
+
+EXAMPLE:
+
+A study is done on the number of bacteria cells in a petri dish. Suppose that the population size p(t) after t hours is given by the following exponential function.
+
+
+A function in the following form models exponential growth or decay.
+
+y=ab^t (where a >0, b>0 and b =! 1)
+
+Here y is an amount and t is the time since some starting point. Note the following:
+
+The constant a is the initial amount, that is, the value of y at t=0.
+
+The constant b tells whether the function models exponential growth or decay.
+If b>1, then the function models growth.
+If b<1, then the function models decay.
+
+From the value of b, we can also get the rate of growth or decay.
+If b>1, then b equals 1+r, where r is the rate of growth.
+That is, r is the percent increase (expressed as a decimal) for each increase of one unit in t.
+If b<1, then b equals 1-r, where r is the rate of decay.
+That is, r is the percent decrease (expressed as a decimal) for each increase of one unit in t.
+
+
+
+Writing an exponential function rule given a table of ordered pairs
+
+The table of ordered pairs (x, y) gives an exponential function.
+Write an equation for the function.
+
+
+(x, y)
+(-1, 1/12)
+(0, 1/2)
+(1, 3)
+(2, 18)
+
+y=a*b**x, where a =! 0 b >0 and b =! 1
+
+a is the intercept of the graph
+
+the intercept is 1/2:
+
+y=1/2*b^x
+
+to find b we subustutite another point in the equation:
+
+y=1/2*b^x
+3=1/2*b^1
+2*3=2*1/2*b^1  (Mutuplying both sides by 2)
+6=b
+
+The function can be written by y=1/2*6^x
+
+------------------------------
+
+y=25*b^x
+
+
+
+
+
+Nathan Hinton
+Dec 3 2019
+Aleks math
+
+Evaluating an exponential function that models a real-world situation
+
+EXAMPLE:
+
+If the rate of inflation is 4.1% per year, the future price p(t) (in dollars) of a certain item can be modeled by the following exponential function, where t is the number of years from today.
+
+p(t)=1500(1.041)^t
+
+Find the current price of the item and the price 10 years from today.
+Round your answers to the nearest dollar as necessary.
+
+set t to the years in the future
+
+
+HOW TO SOLVE: enter in to calc ad the round.
+
+
+Finding a final amount in a word problem on exponential growth or decay
+
+EXAMPLE:
+
+An amount of 47000 is borrowed for 6 years at 4.25 interest, compounded annually. If the loan is paid in full at the end of that period, how much must be paid back?
+Use the calculator provided and round your answer to the nearest dollar.
+
+The original amount borrowed is 47000.
+After the first year, the amount due is the original amount increased by 4.25%.
+So, the amount due after the first year is given by the following:
+47000+47000*0.0425=47000(1+0.0425)=47000(1.0425)
+Similarly, after the second year the amount due increases by another 4.25%.
+So, the amount due after the second year is as follows:
+(47000*1.0425)(1.0425)=47000*1.0425^2
+Here is the amount due after the third year:
+(47000*1.0425^2)(1.0425)=47000*1.0425^3
+We see that after t years, the amount due will be 1.0425^t times the original amount borrowed.
+So, the amount due after t years is given by the following:
+47000*1.0425*t
+In this problem, we need to find the amount due after 6 years.
+47000*1.0425^6=60332.9...
+Rounded to the nearest dollar, we get:
+60333
+
+
+
+
+
+
+Nathan Hinton
+Nov 21 2019
+Aleks Math
+
+Graphing a linear inequality in the plane: Standard form
+
+Plot in sagemath using: MAKE SURE TO USE THE CORRECT EQUATION!
+region_plot(EQUATION , (x, -5, 5), (y, -5, 5),aspect_ratio=1, gridlines = True)
+
+This will give you the side of the inequality, now you just need to graph the line.
+
+
+!!!if the y is less than the other side shade below the line!!!
+
+
+==============================
+
+-2*x-5y>=-5
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+Graphing quadratic functions of the form y=ax^2 and y=(bx)^2 by transforming the parent graph y=x^2
+
+Graph in sagemath
+
+
+Tricks learned and observed:
+
+If there are prens then mutupuly the number by 2 and that is your x value
+
+
+
+
+Nathan Hinton
+Nov 20 2019
+Aleks Math
+
+Finding the multiplier to give a final amount after a percentage increase or decrease
+
+EXAMPLE:
+
+Last year, Martina opened an investment account with 8800. At the end of the year, the amount in the account had increased by 6%.
+
+(a)  Fill in the blank to write the year-end amount in terms of the original amount. Write your answer as a decimal.
+Year-end amount= []*Original amount
+
+(b)	Use your answer in part (a) to determine the year-end amount in Martina's account.
+Year-end amount: []
+
+(a)= 100%+6% = 106% = 1.06
+(b)= 1.06*8800 = 9328
+
+==============================
+
+start: 363000
+change: -8%
+
+(a) = 92% = 0.92
+(b) = 333960
+
+==============================
+
+start: 3450
+change: +13%
+
+(a) = 113% = 1.13
+(b) = 34500*1.13 = 38985
+
+
+Writing an equation in point-slope form given the slope and a point
+
+EXAMPLE:
+
+A line passes through the point (8, -5) and has a slope of -3/4.
+Write an equation in point-slope form for this line
+
+point-slope form:
+y-y1 = m(x-x1)
+
+y--5=(-3/4)(x-8)
+y+5 =(-3/4)(x-8)
+
+==============================
+
+point: (1, 1)
+slope: 7
+
+point-slope form:
+y-1=7(x-1)
+
+==============================
+
+point: (-9, -3)
+slope: 4/3
+
+point-slope form:
+y+3=(4/3)(x+9)
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Finding domain and range from a linear graph in context
+
+EXAMPLE:
+
+The owners of a recreation area filled a small pond with water in 140 minutes. The pond already had some water at the beginning. The graph shows the amount of water (in liters) in the pond versus time (in minutes).
+
+Find the range nd the domain of the function shown:
+
+(0, 300) to (140, 1350)
+
+Write your answers as inequalities, using x or y as appropriate.
+Or, you may instead click on "Empty set" or "All reals" as the answer.
+
+Range = Y axis, MIN <= y <= MAX or All Reals
+Domain = X axis, MIN <= x <= MAX or All Reals
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+f(x)={
+-2x+3 if x<2
+x-3 if x>=2
+}
+
+< or > is a hollow point
+<= or >= is a solid point
+
+if the 2 endpoints are at the same location the function is continuous, otherwise it is not.
+
+==============================
+
+f(x)={
+-x+2 is x <= 1
+5x-2 if x > 1
+
+Not continuous
+
+==============================
+
+f(x)={
+-3x-1 if x < -1
+-x+1 if x>= -1
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Word problem involving average rate of change
+
+6.6  : 198
+13.2 : 0
+
+198-0
+----
+6.6--13.2
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Graphing quadratic functions of the form y=ax2 and y=(bx)2 by transforming the parent graph y=x2
+
+Form of y=ax^2:
+Stretches or shrinks verticaly
+Divide the y by a
+a = the y value
+
+Form of y = (ax)^2:
+Stretches or shrink horizontaly
+Divide the x by a
+invert a to get the x value.
+
+
+
+
+Nathan Hinton
+Nov 19 2019
+Knowledge Check
+
+
+
+Use transformations to get the graph of y=(1/2*x)^2
+
+Graph the inequality:
+
+solve(2x+3y<−12, y)
+y < (2 ∕ 3)(−x − 6)
+
+Find the average reate of change from table:
+
+0=226.6
+10=205.5
+30=157.6
+50=119.6
+70=61.6
+
+find the average rate of change from 0 to 30: 23/10 = 2.3
+
+find the average rate of change from  50 to 70: 29/10 = 2.9
+
+
+Write an equation in point-slope for for this line:
+
+point: (-4, 8)
+slope: (5/4)
+
+8=5/4*-4+x into calc to get b
+
+
+Write a system of equations for this problem and solve it:
+6x+5y=63
+2x+3y=35
+
+x = 7/4
+y = 21/2
+
+best descryption of system:
+6x+7y=5, 5x+7y=3
+
+x = 2
+y = -1
+
+
+Average rate of change from x = -7 to x = -5:
+
+f(-7) = 9
+f(-5) = 3
+
+ 9-3
+----- = -3
+-7--5
+
+Graph the solution to the following system of inequalities:
+
+y>=-4x-5
+y<3x-4
+
+
+A motorboat travels 102 kilometers in 3 hours going upstream. It travels 180 kilometers going downstream in the same amount of time. What is the rate of the boat in still water and what is the rate of the current?
+
+
+Concider the line y=-9x+8.
+Find a perp line passing through (-3, 2)
+Find a para line passing through (-3, 2)
+
+perp:
+2=1/9(-3)+b = 2=1/9(-3)+7/3
+
+para:
+2=-9(-3)+b = 2=-9(-3)-25
+
+
+
+Aleks math
+Finding domain and range from the graph of an exponential function
+
+range = Y
+domain = x
+
+
+Nathan Hinton
+Nov 18 2019
+Aleks math
+
+Finding domain and range from the graph of an exponential function
+
+(a)To find the domain, we project the graph onto the x-axis.
+Because the graph extends to the left and right forever, all real numbers are in the domain.
+
+(b)To find the range, we project the graph onto the y-axis.
+The asymptote is the horizontal line y=-2.
+The graph gets closer to this line without ever touching it.
+The value -2 is not included in the range.
+And the graph extends downward forever.
+
+All values less than -2 are part of the range.
+Therefore, the range of our function is given by y<-2.
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Graphing an exponential function and its asymptote: f(x)=bx
+
+Graph the exponential function f(x)=2^x
+
+Graph the function...
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Rational exponents: Quotient rule
+
+EXAMPLE: Simplify (USE CALC)
+
+w^(2/3)
+-------
+w^(4/5)
+
+We use the quotient rule of exponents to simplify the expression.
+
+w^(2/3)
+------- = w^(2/3)-(4/5)
+w^(4/5)
+
+1 ∕ x^(2 ∕ 15)
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Converting between radical form and exponent form
+
+EXAMPLE: Write the following as a radical expression.
+
+v^(1/2)
+
+We can convert between radical and exponential notations by using the following fact:
+
+x^(m/n) = nSqrt(x^m) = (nSqrt(x))^m
+
+sqrt(v)
+
+==================================================
+
+Write the following as an exponential expression:
+
+3*sqrt(x^2)
+
+x^(2/3)
+
+Nathan Hinton
+Nov 13 2019
+Aleks math
+
+Power rules with negative exponents
+
+(−2x^2⋅y^−6)^4
+
+(16x^8) ∕ y^24
+
+Rewrite the expression without using a negative exponent.
+
+RULE 1: a^-n = 1/a^n
+
+Rule 2: 1/a^-n = a^n
+
+EXAMPLE:
+
+1 / 4n^-4 = n^4 ∕ 4
+
+
+
+
+Graphing a system of two linear inequalities: Basic
+
+y>-3x+4
+y>=3x-7
+
+==================================================
+
+y >= -3x+4
+y < 3x-7
+
+==================================================
+
+y < -2x+3
+y > 5x-2
+
+Nathan Hinton
+Nov 12 2019
+Aleks math
+
+Graphing a system of two linear inequalities: Basic
+
+EXAMPLE:
+
+Graph the solution to the following system of inequalities.
+
+y>4x-3
+x>=-3x+4
+
+First, we graph y>4x-3
+(dashed line)
+
+Next, we graph x>=-3x+4
+(Solid line)
+
+==================================================
+
+y<=-2x+3
+y>5x-2
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Graphing a linear inequality in the plane: Standard form
+
+EXAMPLE:
+
+Graph the inequality.
+
+2x+3y<-3
+
+We first solve the inequality for y:
+
+y<-2/3*x-1
+
+==================================================
+
+y ≤ −4x − 3
+
+==================================================
+
+-2x+5y≤15
+
+y ≤ 0.2(2x + 15)
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Graphing a linear inequality in the plane: Vertical or horizontal line
+
+EXAMPLE:
+
+Graph the inequality in the coordinate plane.
+
+x<6
+
+We need to graph the set of points (x, y) that make x<6 true.
+This set consists of all points that have an -coordinate less than 6 .
+
+These are points to the left of the line x=6 .
+We shade this region of the plane, using a dashed line to show that the line is not part of the solution.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Solving a distance, rate, time problem using a system of linear equations
+
+up = 3210
+down = 3910
+current = 70
+
+==================================================
+
+up = 32km/h
+down = 64km/h
+current = 16km/h
+
+==================================================
+
+Two buses leave towns 1820 kilometers apart at the same time and travel toward each other. One bus travels 20 km/h faster than the other. If they meet in 7 hours, what is the rate of each bus?
+
+7x+7y=1820, y = x+20
+
+x = 120
+y = 140
+
+======================================================================
+
+Writing and solving a system of two linear equations given a table of value
+
+5x+2y=18
+3x+8y=55
+
+x = 1
+y = 6.5
+
+==================================================
+
+2x+3y=24
+4x+8y=61
+
+x = 2.25
+y = 6.5
+
+==================================================
+
+3x+5y=88
+12x+2y=235
+
+x = 37/2
+y = 13/2
+
+
+EXAMPLE:
+
++--------+---------+-------+--------+
+|        |Amount of|Amount |Total   |
+|        |chocolate|of     |cost (in|
+|        |chips (in|walnuts|dollars)|
+|        |pounds)  |(in    |        |
+|        |         |pounds)|        |
++--------+---------+-------+--------+
+|First   |7        |9      |37      |
+|purchase|         |       |        |
++--------+---------+-------+--------+
+|Second  |5        |3      |17      |
+|purchase|         |       |        |
++--------+---------+-------+--------+
+
+Let x be the cost (in dollars) for each pound of chocolate chips.
+Let y be the cost (in dollars) for each pound of walnuts.
+
+
+(a) Writing the system of equations
+
+7x+9y=37
+5x+3y=17
+
+
+Nathan Hinton
+Nov 7 2019
+Solving a system of linear equations using elimination with multiplication and addition
+
+solve the following system of equations
+
+
+7x+6y=-13
+-5x-3y=-1
+
+solve2(7x+6y=-13, -5x-3y=-1, x, y)
+solve2(7x+6y=-13, -5x-3y=-1, y, x)
+
+============================================================
+
+-5x+3y=24
+9x+7y=-6
+
+solve2(-5x+3y=24, 9x+7y=-6, x, y)
+solve2(-5x+3y=24, 9x+7y=-6, y, x)
+
+============================================================
+
+5x+6y=14
+-2x+5y=24
+
+solve2(5x+6y=14, -2x+5y=24, x, y) = x = -2
+solve2(5x+6y=14, -2x+5y=24, y, x) = y = 4
+
+============================================================
+
+4x - 7y = 5
+-7x+ 5y =-16
+
+7(4x - 7y) = 7(5)
+4(-7x+ 5y) =4(-16)
+
+28x - 49y = 35
+-28x+ 20y =-64
+
+    28x - 49y =  35
++  -28x + 20y = -64
+     0x - 29y = -29
+     y = 1
+plug y into one of the origional equations:
+4x - 7*1 = 5
+4x - 7 = 5
+4x = 12
+x = 3
+
+============================================================
+
+4x+5y=-15
+5x+7y=-18
+
+5(4x+5y)=5(-15)
+4(5x+7y)=4(-18)
+
+20x+25y=-75
+20x+28y=-72
+
+-3y=-
+y = 1
+
+4x+5*1=-15
+4x+5=-15
+4x = -20
+x=-5
+
+============================================================
+
+WRONG
+
+-3x-2y= 7
+ 9x+4y=-23
+
+-2(-3x-2y)= 2(7)
+-3(9x+4y)=-3(-23)
+
+ 6x +   4y=14
+-27x+ -12y=69
+
+3(6x+   4y)=3(14)
+-27x+ -12y=69
+
+ 18x + 12y=42
+-27x+ -12y=69
+
+-9x + 0y = -27
+-9x=-27
+x = 3
+
+9*3 -2y=7
+-2y = -20
+y = 10
+
+============================================================
+
+
+
+
+
+How the leading coefficient affects the shape of a parabola
+
+An equation of the form y=ax^2 (a != 0) describes a proabola whose vertex is at the origin
+
+RULE 1
+A positive leading coefficient (a>0) gives a porabola that opens up.
+A negative leading coefficient (a<0) gives a parabola that opens down.	
+
+RULE 2
+A wider parabola has a leading coefficient (a) closer to 0.
+A narrower parabola has a leading coefficient (a) farther from 0.
+
+
+Finding the average rate of change of a function given its graph
+
+f(1) = 3
+f(4) = 17
+
+17-3   14
+---- = --
+4-1    3
+
+===================================================
+
+f(-6) = 1
+f(-2) = 1
+
+ 1-1
+----- = 0
+-2--6
+
+===================================================
+
+f(-5) = -1
+f(-3) = 1
+
+1--1    2
+----- = - = 1
+-3--5   2
+
+
+Nathan Hinton
+Nov 5 2019
+Writing the equation of the line through two given points
+
+    y2-y1   rise
+m = ----- = ----
+    x2-x1   run
+
+
+
+
+Nathan Hinton
+Nov 4 2019
+Aleks Knowledge check
+
+
+
+
+Finding the avg rate of change:
+
+f(x) = x^2-5x+1
+
+f(3) = -5
+f(7) = 15
+
+15-(-5)
+------- = 5
+7-3
+
+
+Factor trinomials with coefficents
+
+(3x^2+15x+9) / (x+4)
+
+Factor: (3x^2+15x+9)
+Form of equation: c*x^2 + (a+b)x + (a*b) = (c*x + a)(x+b)
+
+c = 3
+x = x
+a = 
+b = 
+
+
+
+Nathan Hinton
+Oct 31 2019
+Aleks Knowledge check
+
+A25+B40 = 1500
+a+b = 45
+
+
+b = 25
+a = 20
+
+
+
+
+Avg rate of change
+f(-1)= 3
+f(5) =-9
+
+-9-3
+---- = 
+5-(-1)
+
+
+
+Nathan Hinton
+Oct 24 2019
+Aleks Math
+Topic: Finding the average rate of change of a function given its graph
+
+f(0) = 2
+f(3) = 9
+
+9-2
+---  =  
+3-0
+
+
+
+
+f(-1) = 3
+f(5) = -9
+
+-9-3
+----  =  -5/3
+5-(-1)
+
+
+
+f(3) = -4
+f(4) = -1
+
+-1-(-4)
+-------  =  3
+4-3
+
+
+
+Calculate distance over time with acceleration:
+
+s = vInital*t+1/2*a*t
+
+t = time
+a = acceleration
+vInital = inital velocity
+
+
+
+Nathan Hinton
+Oct 22 2019
+Aleks Math
+Topic: Finding the average rate of change of a function given its equation
+
+Formula for average rate of change:
+
+g(x2)-g(x1)
+-----------   Where x2 != x1
+   x2-x1
+
+EXAMPLE:
+Find the average rate of change of g(x)=2x^2-8x from x = 2 to x = 6
+
+g(2) = 2(2)^2-8(2) = 8-16 = -8
+g(6) = 2(6)^2-8(6) = 72-48 = 24
+
+Then we use the values in the formula:
+
+g(x2)-g(x1) = g(6)-g(2) = 24-(-8) = 32
+----------- = --------- = ------- = -- = 8
+   x2-x1    =    6-2    =    6-2  = 4  
+
+
+
+Nathan Hinton
+Nov 1 2019
+Aleks Math
+Knowledge Check
+
+A line passes through point (-8, 7) and has a slope of -3/4. what is the equation for this line.
+
+------------------------------------------------
+
+-5/7*x+7<2
+-5/7*x<-5
+-5*x<-35
+x>7
+
+
+Nathan Hinton
+Sep 17 2019
 Aleks Math
 
 Topic:

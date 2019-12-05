@@ -3,12 +3,18 @@
 
 from time import sleep
 from random import randint as rint
+from fractions import Fraction
+
+def EquationOfLinePassingThrough2Points(x1, y1, x2, y2):
+    m = (y2-y1)/(x2/y1)
+    print("slope is %s"%Fraction(m))
+    
 
 def imperialToMetric(ft, i):
     inches = (ft*12)+i
     cm = inches*2.54
     return cm
-
+###THIS IS ALREADY BUILT INTO PYTHON UNDER THE PACKAGE "fractions"###
 def fraction(i = True):
     print()
     if i == True:
@@ -24,6 +30,9 @@ def fraction(i = True):
                 finalTop = int(finalTop)
                 finalBottom = int(finalBottom)
                 state = 'reduce'
+            elif 'invert:' in i:
+                i=i.replace('invert:', '')
+                state = 'invert'
             elif '//' in i:
                 state = 'divide'
             elif '*' in i:
@@ -35,6 +44,9 @@ def fraction(i = True):
             else:
                 print("fraction state machine error. No modifier found. Aborting.")
                 break
+        elif state == 'invert':
+            top, bot = i.split('/')
+            print('%s/%s'%(bot, int(top)*-1))
         elif state == 'add':
             frac1, frac2 = i.split('+')
 #            print(frac1, frac2)
@@ -192,6 +204,11 @@ def parallelLinePassingThroughPoint(slope, pointx, pointy):
     b = fraction(i = '%s/1--%s/%s'%(pointy, x[0], x[1]))
     print(b)
 
+def compoundIntrest(start, intrestRate, time):
+    for x in range(time):
+        print("Year %s: %s"%(x+1, round(start*(1+intrestRate), 4)))
+        start = round(start*(1+intrestRate), 4)
+
 print("""
 Functions in the file:
 fraction('str')
@@ -213,6 +230,6 @@ parallelLinePassingThroughPoint(slope, pointx, pointy)
 ##s1 = equationOfLineToSlopeInterceptForm(i = '10x+4y=-4', autoReduce = True)
 ##s2 = slopeInterceptFormGetSlope(i = '2y=5x+7')
 ##checkForParallelOrPerpendicular(s1, s2)
-perpendicularLinePassingThroughPoint('3/4', -6, 4)
+perpendicularLinePassingThroughPoint('4/3', -6, 4)
 print('--------------------------------------')
 parallelLinePassingThroughPoint('-3/4', -6, 4)

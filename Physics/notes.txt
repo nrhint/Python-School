@@ -1,0 +1,52 @@
+Nathan Hinton
+Nov 18 2019
+6.1 Momentum and impulse
+
+link: https://flexbooks.ck12.org/cbook/ck-12-physics-flexbook-2.0/r319/section/6.1/primary/lesson/momentum-and-impulse-phys/?appID=GOOGLE_CLASSROOM&assignmentID=6123293&groupID=641417
+
+Momentum is a vector quantity that has the same direction as the velocity of the object and is represented by a lowercase letter p
+
+p = mv
+
+The impulse is the quantity defined as the force multiplied by the time it is applied. It is a vector quantity that has the same
+
+The units for impulse are N*s but we know that Newtons are also kg*m/s^2 so N*s=(kg*m/s^2)(s) = kg*m/s Impulse and momentum have the same units; when an impulse is applied to an object, the momentum of the object changes and the change of momentum is equal to the impulse.
+
+EXAMPLE 1
+
+A 0.15 kg ball is moving with a velocity of 35 m/s. Find the momentum of the ball.
+
+p = mv = (0.15kg)(35m/s) = 5.25kg*m/s
+
+EXAMPLE 2
+
+If a ball with a mass of 5.00kg has a momentum of 5.25kg*m/s, what is its velocity?
+
+
+
+
+Nathan Hinton
+Nov 13 2019
+4.2 Projectile Motion for an Object Launched Horizontally
+
+Example 1:
+
+If an arrow is fired from a bow with a perfectly horizontal velocity of 60.0 m/s and the arrow was 2.00 m above the ground when the it was released, how far will the arrow fly horizontally before it strikes the ground?
+
+This problem is solved by determining how long it takes the arrow to fall to the ground in exactly the same manner as if the arrow was dropped with no horizontal velocity. The time required for the arrow to fall to the ground will be the same time that the arrow flies horizontally at 60.0 m/s, so
+
+d = 1/2*at**2 solved for t = sqrt(2d/a) = sqrt((2)(2.00 m)/9.80m/s^2) = 0.639
+
+The time required for the fall is multiplied by the horizontal velocity to get the horizontal distance.
+
+dHorizontal = (vHorizontal)(time) = (60.0 m/s)(0.639 s) = 38.3 m
+
+
+
+
+-----------------------------------------------------------------------
+DEFINITIONS
+
+Momentum is a vector quantity that has the same direction as the velocity of the object and is represented by a lowercase letter p
+
+The impulse is the quantity defined as the force multiplied by the time it is applied. It is a vector quantity that has the same direction as the force.
