@@ -1,4 +1,164 @@
 Nathan Hinton
+Dec 16 2019
+Aleks math
+
+Topic: Finding the maximum or minimum of a quadratic function
+
+Answer the questions about the quadratic function:
+
+g(x)=-3x^2+6x-7
+
+Does the function have a Max or Min value
+
+Where does the Max or Min value occur:
+
+What is the functions Max or Min value:
+
+
+The graph on a quadratic function g(x)=ax^2+bx+c is a parabola.
+We are given g(x)=-3^2+6x-7. the leading coefficient a=-3 is negative.
+So the parabola opens downward and g has a maxium value.
+If the parabola opened up than g would have a Min value.
+
+For our function a=-3, b=6 and c=-7 we get the following:
+
+x=-b/2a = -6/2(-3)=1
+
+so the x cord of the vertex is 1
+We use this to find the y cord of the vertex
+
+y=g(x) = -3(1)^2+6(1)-7 = -3+6-7 = -4
+
+The vertex is (1, -4)
+
+
+
+
+
+Nathan Hinton
+Dec 12 2019
+Aleks Math
+
+Write the quadratic function in the form f(x)=a(x-h)^2+k
+Then give the vertex of its graph
+
+EXAMPLE:
+
+f(x)=2x^2+12x+17
+
+Writen in sepcified form: f(x)=f(x)=a(x-h)^2+k
+Vertex: (h, k)
+
+a quadratic function fan be written in the form f(x)=a(x-h)^2+k where a, h, and k are constants and a != 0
+
+The graph of such a function is a parabola whose vertex is (h, k)
+
+We can rewrite f(x)=2x^2+12x+17 in this form by completing the square
+We start with the first twe terms:
+
+f(x)=2x^2+12x+17
+f(x)=2(x^2+6x)+17
+
+
+
+
+Nathan Hinton
+Dec 5 2019
+Aleks math
+
+
+Finding the x-intercept(s) and the vertex of a parabola
+
+
+USE PARENS WHEN SUBUSTUITIN INTO QALCULATE!
+
+
+Find the x-intercept(s) and the coordinates of the vertex for the parabola y=x^2+10x+21. If there is more than one x-intercept, separate them with commas.
+
+Finding the x-intercept(s)
+An x-intercept is the x-coordinate of a point where the graph crosses the x-axis. A parabola can have zero, one, or two x-intercepts.
+
+At each point where a graph crosses the x-axis, the y-coordinate is 0.
+To find any x-intercepts of the parabola y=x^2+10x+21, we let y=0 and solve the resulting quadratic equation.
+
+y=x^2+10x+21
+0=x^2+10x+21
+0=(x+7)(x+3)
+
+soluution: x= -7 OR -3
+
+So there are two x-intercepts which are -7 and -3
+
+
+Finding the vertex
+We found that the x-intercepts are -7 and -3, so the parabola intersects the x-axis at (-7,0) and -3,0). The parabola can be up or down still untin we find the vertex point
+
+In either case, the vertex lies on the axis of symmetry. This means that the x-coordinate of the vertex lies midway between -7 and -3. Using the midpoint formula, we get the following.
+
+x-cordinate of vertex = -7+(-3)/2 = -5
+
+Plugging x = -5 into y=x^2+10x+21 we can find the y-cordinate of the vertex.
+
+y=x^2+10x+21
+y=(-5)^2+10(-5)+21
+y=25-50+21
+y=-4
+
+so the vertex has the cordinates of (-5, -4)
+
+
+if the parabloa only has one x intercept than this x intercept is the vertex and the answer is (x, 0) and x
+
+
+
+
+
+
+The length of a rectangle is 1yd more than twice the width, and the area of the rectangle is 28yd^2. Find the dimensions of the rectangle.
+
+
+let L be the length
+let w be the width
+
+l=2w+1
+l*w=28
+
+we subustutite the expression for l:
+
+(2w+1)w=28
+2w^2+w=28   (mutuply out the paren)
+2w^2+w-28=0
+(2w-7)(w+4)=0
+
+w = -4 OR 3.5
+
+negative lengths are not allowed so use 3.5
+
+l=2w+1
+l=2*3.5+1
+l=6+1
+l=7
+
+
+
+
+
+
+Write an equation in point-slope form for this line.
+
+LEAVE NOT SYMPLIFYED!!!
+
+point = (4, -4)
+slope = 5/4
+
+y-y1=m(x-x1)
+
+ANSWER: y+4=5/4(x-4)
+
+
+
+
+Nathan Hinton
 Dec 5 2019
 Aleks math
 
