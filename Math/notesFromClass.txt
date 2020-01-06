@@ -1,4 +1,163 @@
 Nathan Hinton
+Jan 4 2020
+Aleks math
+
+
+Complete the discriminant and give the number of real solutions of the quadratic equation:
+
+-2x^2+8x-1=0
+
+if b^2-4ac > 0:
+  There are 2 Real soutions. Solve the equation for them.
+if b^2-4ac = 0:
+  Has 1 Real solution: x = -b/2a
+  this has feature of multiplicity two, it is a double solution or a double root
+if b^-4ac < 0:
+  No Real solutions because of a neg sqrt
+
+
+
+
+
+Nathan Hinton
+Dec 20 2019
+Aleks math
+
+Write a quadratic function h whose zeros are -4 and 5
+
+write the function as follows:
+h(x) = a(x-zero1)(x-zero2)  where a is a nonzero constant
+
+
+
+
+Use the quadratic formula to solve for x:
+
+2x^2+5x-1=0
+
+Form:
+
+
+
+Nathan Hinton
+Dec 17 2019
+Aleks math
+
+The table of ordered pairs (x, y) gives an exponential function
+Write an equation for the function:
+(x, y)
+(-1, 2)
+(0, 6)
+(1, 18)
+(2, 54)
+
+
+Try to write the equation in the form ab^x where a != 0 b >0 and b != 1
+The number a is the y intercept of the function, this is the point (0, 6)
+
+y=6b^x
+
+To find b substitute another point into the equation. Using (x, y)=(1, 18)
+
+y=6b^x
+18=6b^1
+3=b (Divide both sides by 6)
+
+The equation can be written as y=6*3^x
+
+
+
+
+
+
+Nathan Hinton
+Dec 17 2019
+Aleks math
+
+
+REVIEW FOR CHECK:
+
+find all the zeros of the quadratic equation
+
+y=x^2+8x-20
+
+I am assuming that this means where the porabola intercepts the x axis
+
+Plug into calculator with y being 0
+
+
+
+WHEN ROUNDING REMEMBER TO KEEP SIG FIGS
+
+Solving a quadratic equation by completing the square: Decimal answers
+
+Solve the quadratic equation by completing the square
+
+x^2+4x-12=0
+
+First, choose the appropriate form and fill in the blanks with the correct numbers. Then, solve the equation. Round your answer to the nearest hundredth. If there is more than one solution, separate them with commas.
+
+Forms:
+(x+[])^2=[]
+(x-[])^2=[]
+
+solution:
+x = []
+
+
+change form from:
+ax^2+bx+c=y to (x+a)^2=b OR (x-a)^2=b
+
+Then solve
+
+
+
+
+----------------------------------------------------------------------
+
+
+Solving an equation of the form x^2 = a using the square root property
+
+solve x^2 = 16 where x is a real number
+Simplify your answer as muvh as possible
+
+If there is more than one solution seperate them with commas and if there is no solution enter no solution.
+
+concider the equation x^2=a
+When a is positive the equation has 2 solutions. we get x=sqrt(a) and x=-sqrt(a)
+When a = 0 there is one solution, x = 0
+when a is negative there are "no real" solutions
+
+
+
+
+----------------------------------------------------------------------
+
+
+
+
+Domain and range from the graph of a parabola:
+
+
+If is possible to determin the domain and range of a function from its graph. The domain is the set of all the numbers that appear as x-cords of points on the graph while the range is the set of all the numbers that appear as y-cords on the graph.
+
+    
+
+
+
+
+----------------------------------------------------------------------
+Python Code:
+#Finding the x value of the max or min of the quadratic expresion in the form ax^2+bx+c
+
+def mxn(a, b):
+	print(-(b/(2*a)))
+
+
+
+
+
+Nathan Hinton
 Dec 16 2019
 Aleks math
 
