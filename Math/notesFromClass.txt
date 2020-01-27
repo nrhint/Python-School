@@ -1,4 +1,58 @@
 Nathan Hinton
+Jan 13 2020
+Aleks math
+
+Multiply.
+(4-5sqrt(3))(2sqrt(6)+3)
+Simplify your answer as much as possible. 
+
+We first use FOIL to multiply the expressions in parentheses.
+Then, we simplify.
+
+
+
+Simplifying a quotient involving a sum or difference with a square root
+Simplify.
+(sqrt(48)-2)/6
+enter into the Qalculater
+
+
+Rationalizing a denominator using conjugates: Integer numerator
+Rationalize the denominator and simplify.
+−5/(3*sqrt(3)+4)
+
+
+
+
+Nathan Hinton
+Jan6 2020
+Aleks math
+
+A ball is thrown from an inital height of 3 meters with an inital upward velocity of 25 m/s. the balls height, h (in meters) after t seconds is given by the following:
+
+
+
+
+h=3+25t-5t^2
+
+find all values of t for which the balls height is 8 meters
+
+EXAMPLE:
+
+To find when the balls height is 8 meters, we substitute 8 for h and solve for t:
+
+8=3+25-5t^2
+
+Insert into calculator.
+
+
+
+
+
+
+
+
+Nathan Hinton
 Jan 4 2020
 Aleks math
 
@@ -6,6 +60,9 @@ Aleks math
 Complete the discriminant and give the number of real solutions of the quadratic equation:
 
 -2x^2+8x-1=0
+
+FORM:
+ax^2+bx+c REMEMBER THAT NEGS ARE IN PAREN
 
 if b^2-4ac > 0:
   There are 2 Real soutions. Solve the equation for them.
@@ -63,7 +120,7 @@ y=6b^x
 18=6b^1
 3=b (Divide both sides by 6)
 
-The equation can be written as y=6*3^x
+The equation can be written as y=6*3^x CHECK EQUATIONS!
 
 
 

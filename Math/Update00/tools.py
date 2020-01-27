@@ -5,9 +5,14 @@ from time import sleep
 from random import randint as rint
 from fractions import Fraction
 
-def EquationOfLinePassingThrough2Points(x1, y1, x2, y2):
-    m = (y2-y1)/(x2/y1)
-    print("slope is %s"%Fraction(m))
+def equationOfLinePassingThrough2Points(x1, y1, x2, y2):
+    print("!!!!!!!!!!!!!!BROKEN!!!!!!!!!!!!!!!!!!")
+    m = (y2+y1)/(x2+x1)
+##    print(y2+y1)
+##    print(x2+x1)
+    print("approximate slope is %s"%Fraction(m))
+    print()
+    print(str((y1-y2))+"/"+str((x1-x2)))
     
 
 def imperialToMetric(ft, i):
