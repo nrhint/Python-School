@@ -1,4 +1,4 @@
-##Nathah hinton
+##Nathan hinton
 ##this will contain all of the helper functons that I have built.
 
 from time import sleep
@@ -6,7 +6,7 @@ from random import randint as rint
 from fractions import Fraction
 
 def equationOfLinePassingThrough2Points(x1, y1, x2, y2):
-    print("!!!!!!!!!!!!!!BROKEN!!!!!!!!!!!!!!!!!!")
+    ##print("!!!!!!!!!!!!!!BROKEN!!!!!!!!!!!!!!!!!!")
     m = (y2+y1)/(x2+x1)
 ##    print(y2+y1)
 ##    print(x2+x1)

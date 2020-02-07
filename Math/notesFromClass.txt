@@ -1,4 +1,101 @@
 Nathan Hinton
+Jan 27-29 2020
+Aleks math - geometry
+
+
+Defnitions:
+
+Linear Pair
+
+Noun phrase. Two adjacent angles with 1 shared side and vertexthat form a line. By the linear pair property, any pair of linear angles is supplementary, that is, the sum of their measures is 180°.
+
+Noun phrase. When two lines intersect, a pair of angles that have a common vertex but no common side are called vertical angles. Vertical Angles Property: If two angles are vertical angles, then they have equal measure, that is, they are congruent.
+
+Congruent: Two figures are congruent if they have the same shape and size, that is, one figure can be moved to perfectly overlap the other. 
+
+Negation:
+The negation of the statement p is the statement representing "not p". 
+The negation of p is often written ∼p.
+Consider the following statement.
+"Veronica lives in New York."
+We can write the negation of this statement in more than one way. Here are two ways to do it.
+"Veronica does not live in New York." 
+"It is not the case that Veronica lives in New York."
+A statement and its negation always have opposite truth values:  ∼p is false whenever p is true, and ∼p is true whenever p is false.
+
+Contrapositive:
+The contrapositive of the statement "If p, then q" is the statement "If ∼q, then ∼p."
+Consider the following statement.
+"If Jesse lives in Dallas, then Jesse lives in Texas."
+Here is its contrapositive.
+"If Jesse does not live in Texas, then Jesse does not live in Dallas."
+
+
+Converse:
+The converse of the statement "If p, then q" is the statement "If q, then p."
+Consider the following statement.
+"If x+3 equals 7, then x equals 4. "
+Here is its converse.
+"If x equals 4, then x+3 equals 7."
+
+
+Inverse:
+The inverse of the statement "If p, then q" is the statement "If ∼p, then ∼q."
+Consider the following statement.
+"If a figure is a rectangle, then it has four sides."
+Here is its inverse.
+"If a figure is not a rectangle, then it does not have four sides."
+
+
+Biconditional:
+A biconditional statement has the form "p if and only if q." In symbols, we write this as ↔pq.
+The form "p if and only if q" is short for "p if q, and p only if q."
+We can think of "p if q" as "If q, then p" or in symbols as →qp.
+And we can think of "p only if q" as "If p, then q" or in symbols as →pq.
+
+So, the above says that "p if and only if q" is equivalent to "If q, then p, and if p, then q."
+Or in symbols, ↔pq is equivalent to ∧→qp  →pq. Here ∧ is the symbol for "and", indicating a conjunction.
+
+
+Conditional Statement:
+A conditional statement is an if-then statement. It has the form "If p, then q."
+"If a triangle is a right triangle, then it has two acute angles" is a conditional statement.
+In the conditional statement "If p, then q,"  p is called the hypothesis and q is called the conclusion.
+
+In the above example, "a triangle is a right triangle" is the hypothesis, and "it has two acute angles" is the conclusion.
+
+
+Counterexample:
+Noun. An example that proves that a statement is false.
+Consider the following statement:
+All odd numbers are prime.
+The number 9 is an odd number, but it is certainly not prime: =9×33.
+Therefore, the number 9 is a counterexample to the statement, and we can conclude that the statement is false.
+
+
+Complementary Angles:
+Noun phrase. Two angles are complementary if and only if the sum of their measures is 90°. If two angles are complementary, then one is called the complement of the other.
+
+
+Supplementary Angles:
+Noun phrase. Two angles are supplementary if and only if the sum of their measures is 180°. If two angles are supplementary, then one is called the supplement of the other.
+
+Law of Detachment:
+The Law of Detachment says the following:
+When both "If p, then q" and  p are true, q must be true.
+In other words, when a conditional statement is true and its hypothesis is true, its conclusion also must be true.
+
+Law of Syllogism:
+The Law of Syllogism says the following:
+When both "If p, then q" and "If q, then r" are true, "If p, then r" must be true.
+
+
+
+
+
+
+
+Nathan Hinton
 Jan 13 2020
 Aleks math
 
