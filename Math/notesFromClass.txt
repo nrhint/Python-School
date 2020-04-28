@@ -1,4 +1,18 @@
 Nathan Hinton
+Apr 27 2020
+Aleks math - trig
+
+         lengthOfSideOppositeAngleB
+sin(B) = --------------------------
+	     lengthOfHypotenuse
+
+
+cos(B) = ----------------------------
+
+
+
+
+Nathan Hinton
 Jan 27-29 2020
 Aleks math - geometry
 
