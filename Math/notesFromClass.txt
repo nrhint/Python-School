@@ -6,10 +6,18 @@ Aleks math - trig
 sin(B) = --------------------------
 	     lengthOfHypotenuse
 
-
+	
 cos(B) = ----------------------------
 
 
+
+SohCahToa
+
+
+
+A right triangle with angle measures of 30, 60, and 90 is considered special. So is one with angle measures of 45, 45, and 90.
+In a 30-60-90 triangle, if the shorter leg has length x, then the longer leg has length x*sqrt(3), and the hypotenuse has length 2x.
+In a 45-45-90 triangle, if a leg has length x, then the hypotenuse has length x*sqrt(2).
 
 
 Nathan Hinton
